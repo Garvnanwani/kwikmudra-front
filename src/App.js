@@ -1,7 +1,10 @@
+/* eslint-disable no-lone-blocks */
 import "./App.css";
 import NavBar from "./components/Navbar";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import HeaderImage from "./assets/headerImage.svg";
+import Header from "./components/Header";
+// import Provider from "./provider";
+// import Context from "./context";
 
 const theme = createMuiTheme({
   palette: {
@@ -16,10 +19,24 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <NavBar />
-        <img src={HeaderImage} />
+        <Header />
       </div>
+      {/* <Provider>
+        All components to provide data here
+      </Provider> */}
     </ThemeProvider>
   );
 }
 
 export default App;
+
+// To use the consumer
+{
+  /* <Context.Consumer>
+  {context => (
+    <div>
+      {context.myData}
+    </div>
+  )}
+</Context.Consumer> */
+}
