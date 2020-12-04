@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/Navbar";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Header from "./components/Header";
+import ProductsPage from "./components/ProductsPage";
 // import Provider from "./provider";
 // import Context from "./context";
 
@@ -20,6 +21,7 @@ function App() {
       <div className="App">
         <NavBar />
         <Header />
+        <ProductsPage />
       </div>
       {/* <Provider>
         All components to provide data here
