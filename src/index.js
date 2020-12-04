@@ -2,8 +2,8 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
 import React from "react"
 import ReactDOM from "react-dom"
 import { UserProvider } from "./context/UserContext"
-import "./index.css"
 import Routing from "./Routing"
+import "./styles/index.css"
 
 const theme = createMuiTheme({
   palette: {
