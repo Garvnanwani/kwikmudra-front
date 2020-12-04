@@ -1,14 +1,7 @@
-import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Grid,
-} from "@material-ui/core";
+import { Card, CardContent, Grid } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import React from "react"
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -44,10 +37,10 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     // marginRight: "auto",
   },
-}));
+}))
 
 export default function AboutPage() {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div className={classes.section}>
       <Grid
@@ -75,7 +68,7 @@ export default function AboutPage() {
             <img
               width="200px"
               src="http://lorempixel.com/640/480"
-              alt="image"
+              alt="lorempixel"
             />
           </div>
         </Grid>
@@ -165,5 +158,5 @@ export default function AboutPage() {
         </Grid>
       </Grid>
     </div>
-  );
+  )
 }

@@ -1,10 +1,8 @@
-import "./App.css";
-import NavBar from "./components/Navbar";
-import Header from "./components/Header";
-import ProductsPage from "./components/ProductsPage";
-import AboutSection from "./components/AboutSection";
-// import Provider from "./provider";
-// import Context from "./context";
+import "./App.css"
+import AboutSection from "./components/AboutSection"
+import Header from "./components/Header"
+import NavBar from "./components/Navbar"
+import ProductsPage from "./components/ProductsPage"
 
 function App() {
   return (
@@ -13,22 +11,8 @@ function App() {
       <Header />
       <ProductsPage />
       <AboutSection />
-      {/* <Provider>
-          All components to provide data here
-        </Provider> */}
     </div>
-  );
+  )
 }
 
-export default App;
-
-// To use the consumer
-{
-  /* <Context.Consumer>
-  {context => (
-    <div>
-      {context.myData}
-    </div>
-  )}
-</Context.Consumer> */
-}
+export default App
