@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import App from "./App"
+import App from "./components/App"
 import NotFound from "./components/NotFound"
 import "./index.css"
 import AboutPage from "./Pages/AboutPage"
