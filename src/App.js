@@ -2,6 +2,7 @@ import "./App.css";
 import NavBar from "./components/Navbar";
 import Header from "./components/Header";
 import ProductsPage from "./components/ProductsPage";
+import AboutSection from "./components/AboutSection";
 // import Provider from "./provider";
 // import Context from "./context";
 
@@ -11,6 +12,7 @@ function App() {
       <NavBar />
       <Header />
       <ProductsPage />
+      <AboutSection />
       {/* <Provider>
           All components to provide data here
         </Provider> */}
