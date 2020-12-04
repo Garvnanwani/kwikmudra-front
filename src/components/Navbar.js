@@ -13,9 +13,10 @@ import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
+// import MoreIcon from "@material-ui/icons/MoreVert";
 import { Button } from "@material-ui/core";
-import { shadows } from "@material-ui/system";
+
+import Logo from "../assets/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -26,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
   },
   space: {
     marginLeft: theme.spacing(4),
+    // [theme.breakpoints.up("sm")]: {
+    // display: "none",
+    // marginRight: "20px",
+    // },
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -34,12 +39,26 @@ const useStyles = makeStyles((theme) => ({
     // display: "none",
     // [theme.breakpoints.up("sm")]: {
     display: "block",
+    marginLeft: "20px",
     // },
   },
   navColors: {
     backgroundColor: "#fff",
     color: "#000",
     boxShadow: "none",
+  },
+  myButton: {
+    paddingTop: "5px",
+    paddingBottom: "5px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+  },
+  logo: {
+    height: "100px",
+    marginTop: "5px",
+    display: "inline",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   //   search: {
   //     position: "relative",
@@ -128,8 +147,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Employee Login</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Agent Login</MenuItem>
     </Menu>
   );
 
@@ -145,20 +164,21 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
+        {/* <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
-        </IconButton>
-        <p>Messages</p>
+        </IconButton> */}
+
+        <p>Out Products</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
+        {/* <IconButton aria-label="show 11 new notifications" color="inherit">
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
           </Badge>
-        </IconButton>
-        <p>Notifications</p>
+        </IconButton> */}
+        <p>Contact Us</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -167,9 +187,16 @@ export default function PrimarySearchAppBar() {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+          <Button
+            className={classes.myButton}
+            variant="contained"
+            color="primary"
+
+            // size="small"
+          >
+            Sign In
+          </Button>
         </IconButton>
-        <p>Profile</p>
       </MenuItem>
     </Menu>
   );
@@ -186,22 +213,18 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography className={classes.title} variant="h6" noWrap>
-            Kwik Mudra Logo
-          </Typography>
+          <img src={Logo} alt="kwikmudra-logo" className={classes.logo} />
 
           <Typography className={classes.space} variant="h6" noWrap>
-            Kwik
+            Our Products
           </Typography>
+          {/* <Typography className={classes.space} variant="h6" noWrap>
+            Resources
+          </Typography> */}
           <Typography className={classes.space} variant="h6" noWrap>
-            Mudra
+            Contact Us
           </Typography>
-          <Typography className={classes.space} variant="h6" noWrap>
-            Logo
-          </Typography>
-          <Typography className={classes.space} variant="h6" noWrap>
-            Kwik Mudra Logo
-          </Typography>
+
           {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -227,9 +250,7 @@ export default function PrimarySearchAppBar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton> */}
-            <Button variant="contained" color="primary" size="small">
-              Sign In
-            </Button>
+
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -238,7 +259,16 @@ export default function PrimarySearchAppBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              {/* <AccountCircle /> */}
+              <Button
+                className={classes.myButton}
+                variant="contained"
+                color="primary"
+
+                // size="small"
+              >
+                Sign In
+              </Button>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
@@ -249,7 +279,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MoreIcon />
+              <MenuIcon />
             </IconButton>
           </div>
         </Toolbar>
