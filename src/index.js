@@ -9,6 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Route, Link, Switch, BrowserRouter as Router } from "react-router-dom";
 import SignUp from "./components/Signup";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import AboutPage from "./Pages/AboutPage";
 
 const theme = createMuiTheme({
   palette: {
@@ -25,6 +26,7 @@ const routing = (
         <Route exact path="/" component={App} />
         <Route path="/signin" component={Signin} />
         <Route path="/signup" component={SignUp} />
+        <Route path="/about" component={AboutPage} />
         <Route component={NotFound} />
       </Switch>
     </Router>
