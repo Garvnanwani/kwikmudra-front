@@ -41,8 +41,10 @@ const useStyles = makeStyles((theme) => ({
     width: "auto",
     marginLeft: "auto",
     marginRight: "auto",
+    textAlign: "-webkit-center",
+    alignSelf: "stretch",
   },
-}));
+}))
 
 export default function AboutPage() {
   const classes = useStyles();
@@ -53,7 +55,7 @@ export default function AboutPage() {
         justify="center"
         alignItems="center"
         spacing={5}
-        style={{ paddingBottom: "40px" }}
+        style={{ paddingBottom: "40px", textAlign: "-webkit-center" }}
       >
         <Grid item xs={12} sm={6}>
           <div className={classes.textSection}>
@@ -89,7 +91,7 @@ export default function AboutPage() {
           >
             <Grid item xs={12} sm={4}>
               <Card variant="outlined" className={classes.cardRoot}>
-                <CardContent style={{ textAlign: "center" }}>
+                <CardContent style={{ textAlign: "-webkit-center" }}>
                   <Typography
                     className={classes.cardTitle}
                     color="textSecondary"
