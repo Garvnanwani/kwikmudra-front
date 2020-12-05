@@ -20,13 +20,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
   cardGrid: {
-    paddingTop: theme.spacing(6),
-    paddingBottom: theme.spacing(6),
-    width: "80%",
-    // minWidth: "85%",
-    // [theme.breakpoints.down("sm")]: {
-    // width: "100%",
-    // },
+    // paddingTop: theme.spacing(6),
+    // paddingBottom: theme.spacing(6),
+    width: "auto",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   card: {
     height: "100%",
@@ -52,71 +50,65 @@ export default function ProductsPage() {
 
   return (
     <React.Fragment>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
 
-      <main style={{ backgroundColor: "#fff" }}>
+      <main
+        style={{
+          backgroundColor: "#fff",
+          paddingTop: "40px",
+          paddingBottom: "100px",
+        }}
+      >
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography
-              component="h1"
+              component="h2"
               variant="h2"
               align="center"
               color="textPrimary"
               gutterBottom
             >
-              Out Products
+              Our Products
             </Typography>
-            {/* <Typography
-              variant="h5"
-              align="center"
-              color="textSecondary"
-              paragraph
-            >
-              Something short and leading about the collection below—its
-            </Typography> */}
           </Container>
         </div>
-        <Container
+        {/* End hero unit */}
+        <Grid
+          container
+          spacing={3}
+          justify="space-around"
+          alignItems="center"
           className={classes.cardGrid}
-          // maxWidth="md"
         >
-          {/* End hero unit */}
-          <Grid
-            container
-            spacing={3}
-            alignItems="center"
-            justifyContent="center"
-          >
-            {cards.map((card) => (
-              <Grid
-                item
-                key={card}
-                xs={2}
-                sm={2}
-                // md={1}
-                // lg={1}
-                className={classes.cardItem}
-              >
-                <Card className={classes.card} variant="outlined">
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions className={classes.icon}>
-                    <img src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg" />
-                    {/* Icons Here */}
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+          {cards.map((card) => (
+            <Grid
+              item
+              key={card}
+              xs={3}
+              sm={2}
+              md={1}
+              // lg={1}
+              className={classes.cardItem}
+            >
+              <Card className={classes.card} variant="outlined">
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Heading
+                  </Typography>
+                  <Typography>
+                    This is a media card. You can use this section to describe
+                    the content.
+                  </Typography>
+                </CardContent>
+                <CardActions className={classes.icon}>
+                  <img src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg" />
+                  {/* Icons Here */}
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </main>
     </React.Fragment>
   );

@@ -7,21 +7,21 @@ import { Button, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "10px",
-    paddingBottom: "20px",
+    // paddingTop: "10px",
+    paddingBottom: "40px",
     background: "#333",
-    height: "95vh",
+    height: "75vh",
     // maxWidth: "80%",
-    textAlign: "center",
+    // textAlign: "center",
     backgroundColor: "#fff",
   },
   image: {
-    height: "350px",
+    width: "500px",
+    // marginRight: "100px",
     [theme.breakpoints.down("sm")]: {
-      height: "250px",
-      marginRight: "0px",
+      width: "350px",
+      // marginRight: "0px",
     },
-    marginRight: "50px",
   },
   buttonStyle: {
     borderRadius: "10px",
@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     // padding: "10px 0px",
     paddingLeft: "20px",
     paddingRight: "20px",
+  },
+  rightSection: {
+    textAlign: "center",
   },
 }));
 
@@ -38,11 +41,12 @@ export default function Header() {
   return (
     <div style={{ textAlign: "center" }}>
       <Grid
+        mx="auto"
         container
-        spacing={8}
+        // spacing={8}
         className={classes.root}
         alignItems="center"
-        justify="center"
+        justify="space-around"
       >
         <Grid item>
           <img
@@ -52,7 +56,7 @@ export default function Header() {
             style={{ textAlign: "center" }}
           />
         </Grid>
-        <Grid item style={{ textAlign: "center" }}>
+        <Grid item className={classes.rightSection}>
           <Typography variant="h2">Kwik Mudra</Typography>
           <Typography variant="h5" gutterBottom>
             Tagline Here

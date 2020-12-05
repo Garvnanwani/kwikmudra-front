@@ -6,10 +6,10 @@ import { Button, Card, CardContent, Grid, Link } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   section: {
     // padding: "20px 20px",
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-    // paddingTop: "20px",
-    // paddingBottom: "20px",
+    // paddingTop: theme.spacing(8),
+    // paddingBottom: theme.spacing(8),
+    paddingTop: "100px",
+    paddingBottom: "50px",
     backgroundColor: "#fff",
   },
   title: {
@@ -59,7 +59,7 @@ export default function AboutSection() {
       </Typography>
       <Grid
         container
-        spacing={4}
+        // spacing={4}
         direction="row"
         justify="center"
         alignItems="center"
