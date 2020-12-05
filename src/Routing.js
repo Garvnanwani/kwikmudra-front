@@ -1,11 +1,11 @@
-import React from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import App from "./components/App"
-import NotFound from "./components/NotFound"
-import "./index.css"
-import AboutPage from "./Pages/AboutPage"
-import SignIn from "./Pages/Signin"
-import Signup from "./Pages/Signup"
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import App from "./Pages/App";
+import NotFound from "./components/NotFound";
+import "./styles/index.css";
+import AboutPage from "./Pages/AboutPage";
+import SignIn from "./Pages/Signin";
+import Signup from "./Pages/Signup";
 
 const Routing = () => {
   return (
@@ -18,7 +18,7 @@ const Routing = () => {
         <Route component={NotFound} />
       </Switch>
     </Router>
-  )
-}
+  );
+};
 
-export default Routing
+export default Routing;

@@ -9,8 +9,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: "10px",
     paddingBottom: "20px",
-    // background: "#333",
+    background: "#333",
     height: "95vh",
+    // maxWidth: "80%",
+    textAlign: "center",
     backgroundColor: "#fff",
   },
   image: {
@@ -34,37 +36,37 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    // <div>
-    <Grid
-      container
-      spacing={5}
-      className={classes.root}
-      alignItems="center"
-      justify="center"
-    >
-      <Grid item>
-        <img
-          src={HeaderImage}
-          alt="header-img"
-          className={classes.image}
-          style={{ textAlign: "center" }}
-        />
+    <div style={{ textAlign: "center" }}>
+      <Grid
+        container
+        spacing={8}
+        className={classes.root}
+        alignItems="center"
+        justify="center"
+      >
+        <Grid item>
+          <img
+            src={HeaderImage}
+            alt="header-img"
+            className={classes.image}
+            style={{ textAlign: "center" }}
+          />
+        </Grid>
+        <Grid item style={{ textAlign: "center" }}>
+          <Typography variant="h2">Kwik Mudra</Typography>
+          <Typography variant="h5" gutterBottom>
+            Tagline Here
+          </Typography>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            className={classes.buttonStyle}
+          >
+            Get Free Credit Score
+          </Button>
+        </Grid>
       </Grid>
-      <Grid item style={{ textAlign: "center" }}>
-        <Typography variant="h2">Kwik Mudra</Typography>
-        <Typography variant="h5" gutterBottom>
-          Tagline Here
-        </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          className={classes.buttonStyle}
-        >
-          Get Free Credit Score
-        </Button>
-      </Grid>
-    </Grid>
-    // </div>
+    </div>
   );
 }
