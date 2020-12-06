@@ -1,16 +1,22 @@
-import Card from "@material-ui/core/Card"
-import CardActions from "@material-ui/core/CardActions"
-import CardContent from "@material-ui/core/CardContent"
-import Container from "@material-ui/core/Container"
-import Grid from "@material-ui/core/Grid"
-import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
-import React from "react"
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
     marginBottom: theme.spacing(2),
+  },
+  mainStyle: {
+    backgroundColor: "#DF6B57",
+    paddingTop: "40px",
+    paddingBottom: "100px",
+    backgroundImage: `url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23fdfdfd' fill-opacity='0.19' fill-rule='evenodd'/%3E%3C/svg%3E")`,
   },
   heroContent: {
     padding: theme.spacing(0, 0, 6),
@@ -42,24 +48,18 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     flexGrow: 1,
   },
-}))
+}));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export default function ProductsPage() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <React.Fragment>
       {/* <CssBaseline /> */}
 
-      <main
-        style={{
-          backgroundColor: "#DF6B57",
-          paddingTop: "40px",
-          paddingBottom: "100px",
-        }}
-      >
+      <main className={classes.mainStyle}>
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
@@ -69,6 +69,7 @@ export default function ProductsPage() {
               align="center"
               color="textPrimary"
               gutterBottom
+              style={{ color: "#fff", fontWeight: "500" }}
             >
               Our Products
             </Typography>
@@ -115,5 +116,5 @@ export default function ProductsPage() {
         </Grid>
       </main>
     </React.Fragment>
-  )
+  );
 }
