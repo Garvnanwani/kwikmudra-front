@@ -1,13 +1,11 @@
-import React from "react";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Link from "@material-ui/core/Link";
+import Card from "@material-ui/core/Card"
+import CardActions from "@material-ui/core/CardActions"
+import CardContent from "@material-ui/core/CardContent"
+import Container from "@material-ui/core/Container"
+import Grid from "@material-ui/core/Grid"
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import React from "react"
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -29,8 +27,10 @@ const useStyles = makeStyles((theme) => ({
   card: {
     height: "100%",
     display: "flex",
+    marginBottom: "1.3rem",
     flexDirection: "column",
     borderRadius: "15px",
+    border: "1px solid black",
     backgroundColor: "#fafafa",
     boxShadow: "8px 8px 5px 1px rgba(0,0,0,0.25)",
   },
@@ -41,12 +41,12 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     flexGrow: 1,
   },
-}));
+}))
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 export default function ProductsPage() {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <React.Fragment>
@@ -102,7 +102,10 @@ export default function ProductsPage() {
                   </Typography>
                 </CardContent>
                 <CardActions className={classes.icon}>
-                  <img src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg" />
+                  <img
+                    src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
+                    alt="product"
+                  />
                   {/* Icons Here */}
                 </CardActions>
               </Card>
@@ -111,5 +114,5 @@ export default function ProductsPage() {
         </Grid>
       </main>
     </React.Fragment>
-  );
+  )
 }

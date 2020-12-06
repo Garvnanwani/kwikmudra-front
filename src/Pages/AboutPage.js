@@ -1,13 +1,16 @@
-import { Card, CardContent, Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import React from "react";
+import { Card, CardContent, Grid } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import React from "react"
 
 const useStyles = makeStyles((theme) => ({
   section: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
     backgroundColor: "#fff",
+    maxWidth: "85%",
+    textAlign: "center",
+    marginRight: "0 auto",
   },
   textSection: {
     paddingLeft: "30px",
@@ -47,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function AboutPage() {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div className={classes.section}>
       <Grid
@@ -168,5 +171,5 @@ export default function AboutPage() {
         </Grid>
       </Grid>
     </div>
-  );
+  )
 }
