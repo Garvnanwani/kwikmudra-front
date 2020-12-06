@@ -55,7 +55,7 @@ export default function ProductsPage() {
 
       <main
         style={{
-          backgroundColor: "#fff",
+          backgroundColor: "#DF6B57",
           paddingTop: "40px",
           paddingBottom: "100px",
         }}

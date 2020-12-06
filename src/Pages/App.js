@@ -11,7 +11,9 @@ function App() {
       <div className="content">
         <NavBar />
         <Header />
-        <ProductsPage />
+      </div>
+      <ProductsPage />
+      <div className="content">
         <AboutSection />
       </div>
       <Footer />
