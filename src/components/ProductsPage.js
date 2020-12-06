@@ -10,6 +10,7 @@ import React from "react"
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
   heroContent: {
     padding: theme.spacing(0, 0, 6),
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1.3rem",
     flexDirection: "column",
     borderRadius: "15px",
-    border: "1px solid black",
+    border: "2px solid black",
     backgroundColor: "#fafafa",
     boxShadow: "8px 8px 5px 1px rgba(0,0,0,0.25)",
   },
