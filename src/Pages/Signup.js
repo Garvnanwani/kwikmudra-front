@@ -53,7 +53,12 @@ export default function SignUp() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#fff",
+        height: "100vh",
+      }}
+    >
       <Navbar />
       <Container component="main" maxWidth="xs">
         <CssBaseline />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -13,6 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Navbar from "../components/Navbar";
+import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
 
 function Copyright() {
   return (
@@ -49,9 +50,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
   const classes = useStyles();
+  const [loginType, setLoginType] = useState("agent");
+
+  const handleChange = (event) => {
+    setLoginType(event.target.value);
+  };
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#fff",
+        height: "100vh",
+      }}
+    >
       <Navbar />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -85,6 +96,27 @@ export default function SignIn() {
               id="password"
               autoComplete="current-password"
             />
+            <FormControl
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              className={classes.formControl}
+            >
+              <InputLabel id="employment-type">I am </InputLabel>
+              <Select
+                labelId="login-type"
+                id="login-type"
+                value={loginType}
+                onChange={handleChange}
+                label="I am"
+              >
+                {/* <MenuItem value="">
+                  <em>None</em>
+                </MenuItem> */}
+                <MenuItem value={"employee"}>Employee</MenuItem>
+                <MenuItem value={"agent"}>Partner</MenuItem>
+              </Select>
+            </FormControl>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -96,7 +128,12 @@ export default function SignIn() {
               color="primary"
               className={classes.submit}
             >
-              Sign In
+              Sign In As
+              {loginType === "agent" ? (
+                <span>&nbsp;Partner</span>
+              ) : (
+                <span>&nbsp;Employee</span>
+              )}
             </Button>
             <Grid container justify="center" alignItems="center">
               {/* <Grid item xs>
@@ -104,11 +141,15 @@ export default function SignIn() {
                 Forgot password?
               </Link>
             </Grid> */}
-              <Grid item>
-                <Link href="/signup" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
+              {loginType === "agent" ? (
+                <Grid item>
+                  <Link href="/signup" variant="body2">
+                    {"Don't have an account? Sign Up"}
+                  </Link>
+                </Grid>
+              ) : (
+                ""
+              )}
             </Grid>
           </form>
         </div>
