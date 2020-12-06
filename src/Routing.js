@@ -6,6 +6,7 @@ import "./styles/index.css";
 import AboutPage from "./Pages/AboutPage";
 import SignIn from "./Pages/Signin";
 import Signup from "./Pages/Signup";
+import Dashboard from "./Pages/Admin/Dashboard";
 
 const Routing = () => {
   return (
@@ -15,6 +16,7 @@ const Routing = () => {
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={Signup} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/admin" component={Dashboard} />
         <Route component={NotFound} />
       </Switch>
     </Router>
