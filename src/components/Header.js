@@ -5,6 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import HeaderImage from "../assets/headerImage.svg";
 import { Button, Typography } from "@material-ui/core";
 
+import Fade from "react-reveal/Fade";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     // paddingTop: "10px",
@@ -49,26 +51,30 @@ export default function Header() {
         justify="space-around"
       >
         <Grid item>
-          <img
-            src={HeaderImage}
-            alt="header-img"
-            className={classes.image}
-            style={{ textAlign: "center" }}
-          />
+          <Fade left>
+            <img
+              src={HeaderImage}
+              alt="header-img"
+              className={classes.image}
+              style={{ textAlign: "center" }}
+            />
+          </Fade>
         </Grid>
         <Grid item className={classes.rightSection}>
-          <Typography variant="h2">Kwik Mudra</Typography>
-          <Typography variant="h5" gutterBottom>
-            Tagline Here
-          </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            className={classes.buttonStyle}
-          >
-            Get Free Credit Score
-          </Button>
+          <Fade right>
+            <Typography variant="h2">Kwik Mudra</Typography>
+            <Typography variant="h5" gutterBottom>
+              Tagline Here
+            </Typography>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              className={classes.buttonStyle}
+            >
+              Get Free Credit Score
+            </Button>
+          </Fade>
         </Grid>
       </Grid>
     </div>
