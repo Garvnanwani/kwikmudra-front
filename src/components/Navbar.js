@@ -1,15 +1,16 @@
 // import MoreIcon from "@material-ui/icons/MoreVert";
-import { Button } from "@material-ui/core"
-import AppBar from "@material-ui/core/AppBar"
-import IconButton from "@material-ui/core/IconButton"
-import Menu from "@material-ui/core/Menu"
-import MenuItem from "@material-ui/core/MenuItem"
-import { makeStyles } from "@material-ui/core/styles"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
-import MenuIcon from "@material-ui/icons/Menu"
-import React from "react"
-import Logo from "../assets/logo.png"
+import { Button } from "@material-ui/core";
+import AppBar from "@material-ui/core/AppBar";
+import IconButton from "@material-ui/core/IconButton";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import { makeStyles } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import MenuIcon from "@material-ui/icons/Menu";
+import React from "react";
+import { Link } from "@material-ui/core";
+import Logo from "../assets/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -103,34 +104,34 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-}))
+}));
 
 export default function PrimarySearchAppBar() {
-  const classes = useStyles()
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
+  const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const isMenuOpen = Boolean(anchorEl)
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
+  const isMenuOpen = Boolean(anchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
 
   const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null)
-  }
+    setMobileMoreAnchorEl(null);
+  };
 
   const handleMenuClose = () => {
-    setAnchorEl(null)
-    handleMobileMenuClose()
-  }
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  };
 
   const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget)
-  }
+    setMobileMoreAnchorEl(event.currentTarget);
+  };
 
-  const menuId = "primary-search-account-menu"
+  const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -141,12 +142,16 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Employee Login</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Agent Login</MenuItem>
+      <Link href="/signin" style={{ textDecoration: "none" }}>
+        <MenuItem onClick={handleMenuClose}>Employee Login</MenuItem>
+      </Link>
+      <Link href="/signin" style={{ textDecoration: "none" }}>
+        <MenuItem onClick={handleMenuClose}>Agent Login</MenuItem>
+      </Link>
     </Menu>
-  )
+  );
 
-  const mobileMenuId = "primary-search-account-menu-mobile"
+  const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
@@ -157,23 +162,27 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        {/* <IconButton aria-label="show 4 new mails" color="inherit">
+      <Link href="/#products" style={{ textDecoration: "none" }}>
+        <MenuItem>
+          {/* <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
         </IconButton> */}
 
-        <p>Out Products</p>
-      </MenuItem>
-      <MenuItem>
-        {/* <IconButton aria-label="show 11 new notifications" color="inherit">
+          <p>Out Products</p>
+        </MenuItem>
+      </Link>
+      <Link href="/about" style={{ textDecoration: "none" }}>
+        <MenuItem>
+          {/* <IconButton aria-label="show 11 new notifications" color="inherit">
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
           </Badge>
         </IconButton> */}
-        <p>Contact Us</p>
-      </MenuItem>
+          <p>About Us</p>
+        </MenuItem>
+      </Link>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -193,7 +202,7 @@ export default function PrimarySearchAppBar() {
         </IconButton>
       </MenuItem>
     </Menu>
-  )
+  );
 
   return (
     <div className={classes.grow}>
@@ -207,17 +216,23 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton> */}
-          <img src={Logo} alt="kwikmudra-logo" className={classes.logo} />
+          <Link href="/">
+            <img src={Logo} alt="kwikmudra-logo" className={classes.logo} />
+          </Link>
 
-          <Typography className={classes.space} variant="h6" noWrap>
-            Our Products
-          </Typography>
+          <Link href="/#products" style={{ textDecoration: "none" }}>
+            <Typography className={classes.space} variant="h6" noWrap>
+              Our Products
+            </Typography>
+          </Link>
           {/* <Typography className={classes.space} variant="h6" noWrap>
             Resources
           </Typography> */}
-          <Typography className={classes.space} variant="h6" noWrap>
-            Contact Us
-          </Typography>
+          <Link href="/about" style={{ textDecoration: "none" }}>
+            <Typography className={classes.space} variant="h6" noWrap>
+              About Us
+            </Typography>
+          </Link>
 
           {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -281,5 +296,5 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
     </div>
-  )
+  );
 }
