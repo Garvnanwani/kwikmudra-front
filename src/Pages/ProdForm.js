@@ -47,7 +47,10 @@ const useStyles = makeStyles((theme) => ({
 export default function ProdForm() {
   const { productName } = useParams()
   const classes = useStyles()
-  const product = products.filter((product) => product.name === productName)
+  const product_array = products.filter(
+    (product) => product.name === productName
+  )
+  const product = product_array[0]
   const [age, setAge] = React.useState("")
 
   const handleChange = (event) => {

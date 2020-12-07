@@ -191,11 +191,11 @@ const SignUp = () => {
                   variant="outlined"
                   required
                   fullWidth
-                  name="referral-code"
-                  label="Referral Code"
+                  name="user-name"
+                  label="Username"
                   type="text"
                   id="c"
-                  autoComplete="referral-code"
+                  autoComplete="user-name"
                   value={username.value}
                   onChange={username.onChange}
                 />
