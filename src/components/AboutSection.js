@@ -14,12 +14,20 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "#DF6B57",
+    fontSize: "4rem",
     textAlign: "center",
     fontWeight: 500,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2rem",
+    },
   },
   cardTitle: {
     color: "#df6b57",
+    fontSize: "2.5rem",
     paddingBottom: "20px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2rem",
+    },
     // fontSize: "20px",
   },
   cardRoot: {
@@ -38,9 +46,23 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "40px",
   },
   buttonStyle: {
-    padding: "15px 30px",
+    padding: "7px 20px",
     fontSize: "25px",
     borderRadius: 15,
+    transition: theme.transitions.create(
+      ["background", "transform", "color", "background-color"],
+      {
+        duration: theme.transitions.duration.standard,
+      }
+    ),
+    "&:hover": {
+      transform: `scale(1.05)`,
+      border: "1px solid",
+      borderColor: theme.palette.primary.main,
+      color: theme.palette.primary.main,
+      backgroundColor: "#fff",
+      cursor: "pointer",
+    },
   },
 }));
 

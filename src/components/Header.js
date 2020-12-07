@@ -31,6 +31,20 @@ const useStyles = makeStyles((theme) => ({
     // padding: "10px 0px",
     paddingLeft: "20px",
     paddingRight: "20px",
+    transition: theme.transitions.create(
+      ["background", "transform", "color", "background-color"],
+      {
+        duration: theme.transitions.duration.standard,
+      }
+    ),
+    "&:hover": {
+      transform: `scale(1.05)`,
+      border: "1px solid",
+      borderColor: theme.palette.primary.main,
+      color: theme.palette.primary.main,
+      backgroundColor: "#fff",
+      cursor: "pointer",
+    },
   },
   rightSection: {
     textAlign: "center",
