@@ -48,6 +48,20 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "5px",
     paddingLeft: "10px",
     paddingRight: "10px",
+    transition: theme.transitions.create(
+      ["background", "transform", "color", "background-color"],
+      {
+        duration: theme.transitions.duration.standard,
+      }
+    ),
+    "&:hover": {
+      transform: `scale(1.05)`,
+      border: "1px solid",
+      borderColor: theme.palette.primary.main,
+      color: theme.palette.primary.main,
+      backgroundColor: "#fff",
+      cursor: "pointer",
+    },
   },
   logo: {
     height: "100px",
@@ -195,7 +209,6 @@ export default function PrimarySearchAppBar() {
             className={classes.myButton}
             variant="contained"
             color="primary"
-
             // size="small"
           >
             Sign In
@@ -275,7 +288,6 @@ export default function PrimarySearchAppBar() {
                   className={classes.myButton}
                   variant="contained"
                   color="primary"
-
                   // size="small"
                 >
                   Sign In

@@ -1,14 +1,14 @@
-import { Link } from "@material-ui/core"
-import Card from "@material-ui/core/Card"
-import CardActions from "@material-ui/core/CardActions"
-import CardContent from "@material-ui/core/CardContent"
-import Container from "@material-ui/core/Container"
-import Grid from "@material-ui/core/Grid"
-import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
-import React from "react"
-import Fade from "react-reveal/Fade"
-import products from "./products"
+import { Link } from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import React from "react";
+import Fade from "react-reveal/Fade";
+import products from "./products";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -76,6 +76,8 @@ const useStyles = makeStyles((theme) => ({
   },
   cardHeading: {
     textAlign: "left !important",
+    color: theme.palette.primary.main,
+    fontWeight: theme.typography.fontWeightMedium,
     [theme.breakpoints.down("sm")]: {
       fontSize: "25px",
     },
@@ -86,10 +88,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "15px",
     },
   },
-}))
+}));
 
 export default function ProductsPage() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <div id="products">
@@ -121,10 +123,10 @@ export default function ProductsPage() {
           alignItems="center"
           className={classes.cardGrid}
         >
-          {products.map((card) => (
+          {products.map((card, key) => (
             <Grid
               item
-              key={card}
+              key={key}
               xs={3}
               sm={3}
               md={3}
@@ -151,6 +153,7 @@ export default function ProductsPage() {
                       <img
                         src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
                         alt="product"
+                        height="50px"
                       />
                       {/* Icons Here */}
                     </CardActions>
@@ -162,5 +165,5 @@ export default function ProductsPage() {
         </Grid>
       </main>
     </div>
-  )
+  );
 }

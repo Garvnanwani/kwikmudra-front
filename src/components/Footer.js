@@ -239,7 +239,7 @@ const Footer = ({ setValue, setSelectedIndex }) => {
               component={"a"}
               target="_blank"
               rel="noreferrer noopener"
-              href="https://satoruakiyama.com"
+              href="/"
             >
               <HomeIcon className={classes.snsIcon} />
             </Grid>
@@ -248,7 +248,7 @@ const Footer = ({ setValue, setSelectedIndex }) => {
               component={"a"}
               target="_blank"
               rel="noreferrer noopener"
-              href="https://www.facebook.com/satoruakiyama1998"
+              href="/"
             >
               <FacebookIcon className={classes.snsIcon} />
             </Grid>
@@ -257,7 +257,7 @@ const Footer = ({ setValue, setSelectedIndex }) => {
               component={"a"}
               target="_blank"
               rel="noreferrer noopener"
-              href="https://www.instagram.com/developer_satoru_akiyama/"
+              href="/"
             >
               <InstagramIcon className={classes.snsIcon} />
             </Grid>
@@ -266,7 +266,7 @@ const Footer = ({ setValue, setSelectedIndex }) => {
               component={"a"}
               target="_blank"
               rel="noreferrer noopener"
-              href="https://github.com/SatoruAkiyama/material-ui-header-and-footer/"
+              href="/"
             >
               <GitHubIcon className={classes.snsIcon} />
             </Grid>

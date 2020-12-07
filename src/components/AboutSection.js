@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Card, CardContent, Grid, Link } from "@material-ui/core";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -14,9 +15,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "#DF6B57",
-    fontSize: "4rem",
+    fontSize: "2.7rem",
     textAlign: "center",
-    fontWeight: 500,
+    fontWeight: theme.typography.fontWeightMedium,
     [theme.breakpoints.down("sm")]: {
       fontSize: "2rem",
     },
@@ -70,134 +71,142 @@ export default function AboutSection() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
-      <Typography
-        variant="h3"
-        component="h3"
-        className={classes.title}
-        gutterBottom
-      >
-        Kwik Mudra is India’s largest digital marketplace for loans & credit
-        cards
-      </Typography>
-      <Grid
-        container
-        // spacing={4}
-        direction="row"
-        justify="center"
-        alignItems="center"
-        className={classes.gridContainer}
-      >
-        <Grid item xs={12} sm={6} md={6} className={classes.item}>
-          <Card variant="outlined" className={classes.cardRoot}>
-            <CardContent style={{ textAlign: "center" }}>
-              <Typography
-                className={classes.cardTitle}
-                color="textSecondary"
-                variant="h4"
-                component="h4"
-                gutterBottom
-              >
-                <img
-                  alt="start-img"
-                  width="30px"
-                  src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
-                />
-                Word of the Day
-              </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-              </Typography>
-            </CardContent>
-          </Card>
+      <Fade top>
+        <Typography
+          variant="h3"
+          component="h3"
+          className={classes.title}
+          gutterBottom
+        >
+          Kwik Mudra is India’s largest digital marketplace for loans & credit
+          cards
+        </Typography>
+      </Fade>
+
+      <Fade>
+        <Grid
+          container
+          // spacing={4}
+          direction="row"
+          justify="center"
+          alignItems="center"
+          className={classes.gridContainer}
+        >
+          <Grid item xs={12} sm={6} md={6} className={classes.item}>
+            <Card variant="outlined" className={classes.cardRoot}>
+              <CardContent style={{ textAlign: "center" }}>
+                <Typography
+                  className={classes.cardTitle}
+                  color="textSecondary"
+                  variant="h4"
+                  component="h4"
+                  gutterBottom
+                >
+                  <img
+                    alt="start-img"
+                    width="30px"
+                    src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
+                  />
+                  Heading Here
+                </Typography>
+                <Typography variant="body2" component="p">
+                  some other text here
+                  <br />
+                  {'"a benevolent smile"'}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} className={classes.item}>
+            <Card variant="outlined" className={classes.cardRoot}>
+              <CardContent style={{ textAlign: "center" }}>
+                <Typography
+                  className={classes.cardTitle}
+                  color="textSecondary"
+                  variant="h4"
+                  component="h4"
+                  gutterBottom
+                >
+                  <img
+                    alt="start-img"
+                    width="30px"
+                    src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
+                  />
+                  Heading Here
+                </Typography>
+                <Typography variant="body2" component="p">
+                  some other text here
+                  <br />
+                  {'"a benevolent smile"'}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} className={classes.item}>
+            <Card variant="outlined" className={classes.cardRoot}>
+              <CardContent style={{ textAlign: "center" }}>
+                <Typography
+                  className={classes.cardTitle}
+                  color="textSecondary"
+                  variant="h4"
+                  component="h4"
+                  gutterBottom
+                >
+                  <img
+                    alt="start-img"
+                    width="30px"
+                    src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
+                  />
+                  Heading Here
+                </Typography>
+                <Typography variant="body2" component="p">
+                  some other text here
+                  <br />
+                  {'"a benevolent smile"'}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} className={classes.item}>
+            <Card variant="outlined" className={classes.cardRoot}>
+              <CardContent style={{ textAlign: "center" }}>
+                <Typography
+                  className={classes.cardTitle}
+                  color="textSecondary"
+                  variant="h4"
+                  component="h4"
+                  gutterBottom
+                >
+                  <img
+                    alt="start-img"
+                    width="30px"
+                    src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
+                  />
+                  Heading Here
+                </Typography>
+                <Typography variant="body2" component="p">
+                  some other text here
+                  <br />
+                  {'"a benevolent smile"'}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} className={classes.item}>
-          <Card variant="outlined" className={classes.cardRoot}>
-            <CardContent style={{ textAlign: "center" }}>
-              <Typography
-                className={classes.cardTitle}
-                color="textSecondary"
-                variant="h4"
-                component="h4"
-                gutterBottom
-              >
-                <img
-                  alt="start-img"
-                  width="30px"
-                  src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
-                />
-                Word of the Day
-              </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={6} md={6} className={classes.item}>
-          <Card variant="outlined" className={classes.cardRoot}>
-            <CardContent style={{ textAlign: "center" }}>
-              <Typography
-                className={classes.cardTitle}
-                color="textSecondary"
-                variant="h4"
-                component="h4"
-                gutterBottom
-              >
-                <img
-                  alt="start-img"
-                  width="30px"
-                  src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
-                />
-                Word of the Day
-              </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={6} md={6} className={classes.item}>
-          <Card variant="outlined" className={classes.cardRoot}>
-            <CardContent style={{ textAlign: "center" }}>
-              <Typography
-                className={classes.cardTitle}
-                color="textSecondary"
-                variant="h4"
-                component="h4"
-                gutterBottom
-              >
-                <img
-                  alt="start-img"
-                  width="30px"
-                  src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
-                />
-                Word of the Day
-              </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+      </Fade>
+
       <div style={{ textAlign: "center" }}>
-        <Link style={{ textDecoration: "none" }} href="/about">
-          <Button
-            color="primary"
-            variant="contained"
-            className={classes.buttonStyle}
-          >
-            About US
-          </Button>
-        </Link>
+        <Fade bottom>
+          <Link style={{ textDecoration: "none" }} href="/about">
+            <Button
+              color="primary"
+              variant="contained"
+              className={classes.buttonStyle}
+            >
+              About US
+            </Button>
+          </Link>
+        </Fade>
       </div>
     </div>
   );

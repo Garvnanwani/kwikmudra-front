@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     // paddingTop: "10px",
     paddingBottom: "40px",
     background: "#333",
-    height: "75vh",
+    height: "70vh",
     // maxWidth: "80%",
     // textAlign: "center",
     backgroundColor: "#fff",
@@ -86,7 +86,7 @@ export default function Header() {
               size="large"
               className={classes.buttonStyle}
             >
-              Get Free Credit Score
+              Get Free Credit Score >
             </Button>
           </Fade>
         </Grid>
