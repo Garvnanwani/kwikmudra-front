@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -14,6 +14,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Navbar from "../components/Navbar";
 import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import { UserContext } from "../context/UserContext";
+import useInput from "../hooks/useInput";
+import { client } from "../utils";
 
 function Copyright() {
   return (
@@ -49,12 +54,44 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn() {
+  const { setUser } = useContext(UserContext);
+  const username = useInput("");
+  const password = useInput("");
+  const history = useHistory();
+
   const classes = useStyles();
   const [loginType, setLoginType] = useState("agent");
 
   const handleChange = (event) => {
     setLoginType(event.target.value);
   };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    if (!username.value || !password.value) {
+      return toast.error("Please fill in both the fields");
+    }
+
+    const body = { username: username.value, password: password.value, role: loginType };
+
+    try {
+      const { token } = await client("/auth/login", { body });
+      localStorage.setItem("token", token);
+    } catch (err) {
+      return toast.error(err.message);
+    }
+
+    const user = await client("/auth/userprofile");
+    localStorage.setItem("user", JSON.stringify(user.data));
+    setUser(user.data);
+    toast.success("Login successful");
+
+    username.setValue("");
+    password.setValue("");
+    history.push('/')
+  };
+
 
   return (
     <div
@@ -73,17 +110,17 @@ export default function SignIn() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} noValidate onSubmit={handleLogin}>
             <TextField
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
+              id="username"
+              label="Username"
+              name="username"
+              value={username.value}
+              onChange={username.onChange}
             />
             <TextField
               variant="outlined"
@@ -94,7 +131,8 @@ export default function SignIn() {
               label="Password"
               type="password"
               id="password"
-              autoComplete="current-password"
+              value={password.value}
+              onChange={password.onChange}
             />
             <FormControl
               variant="outlined"

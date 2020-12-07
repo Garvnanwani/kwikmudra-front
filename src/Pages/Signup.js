@@ -137,7 +137,6 @@ const SignUp = () => {
                   fullWidth
                   id="fullName"
                   label="Full Name"
-                  autoFocus
                   value={fullName.value}
                   onChange={fullName.onChange}
                 />
@@ -163,7 +162,6 @@ const SignUp = () => {
                   id="email"
                   label="Email Address"
                   name="email"
-                  autoComplete="email"
                   value={email.value}
                   onChange={email.onChange}
                 />
@@ -177,7 +175,6 @@ const SignUp = () => {
                   label="Password"
                   type="password"
                   id="password"
-                  autoComplete="current-password"
                   value={password.value}
                   onChange={password.onChange}
                 />
@@ -191,7 +188,6 @@ const SignUp = () => {
                   label="Username"
                   type="text"
                   id="c"
-                  autoComplete="user-name"
                   value={username.value}
                   onChange={username.onChange}
                 />
@@ -205,7 +201,6 @@ const SignUp = () => {
                   label="Referral Code"
                   type="text"
                   id="c"
-                  autoComplete="referral-code"
                   value={referralCode.value}
                   onChange={referralCode.onChange}
                 />
