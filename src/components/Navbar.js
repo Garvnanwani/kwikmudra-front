@@ -16,7 +16,7 @@ import Fade from "react-reveal/Fade";
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    maxWidth: "90%",
+    maxWidth: "95%",
   },
   menuButton: {
     marginRight: theme.spacing(2),
