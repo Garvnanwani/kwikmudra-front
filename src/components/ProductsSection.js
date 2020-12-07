@@ -1,15 +1,15 @@
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import React from "react";
-import Fade from "react-reveal/Fade";
-import { Link } from "@material-ui/core";
-
-import products from "./products";
+import { Link } from "@material-ui/core"
+import Card from "@material-ui/core/Card"
+import CardActions from "@material-ui/core/CardActions"
+import CardContent from "@material-ui/core/CardContent"
+import Container from "@material-ui/core/Container"
+import Grid from "@material-ui/core/Grid"
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import React from "react"
+import Fade from "react-reveal/Fade"
+import { useParams } from "react-router-dom"
+import products from "./products"
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -87,10 +87,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "15px",
     },
   },
-}));
+}))
 
 export default function ProductsPage() {
-  const classes = useStyles();
+  const classes = useStyles()
+  const { productName } = useParams()
 
   return (
     <div id="products">
@@ -163,5 +164,5 @@ export default function ProductsPage() {
         </Grid>
       </main>
     </div>
-  );
+  )
 }

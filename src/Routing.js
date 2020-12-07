@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import App from "./Pages/App";
 import NotFound from "./components/NotFound";
-import "./styles/index.css";
 import AboutPage from "./Pages/AboutPage";
+import Dashboard from "./Pages/Admin/Dashboard";
+import App from "./Pages/App";
+import ProdForm from "./Pages/ProdForm";
 import SignIn from "./Pages/Signin";
 import Signup from "./Pages/Signup";
-import Dashboard from "./Pages/Admin/Dashboard";
-import ProdForm from "./Pages/ProdForm";
+import "./styles/index.css";
 
 const Routing = () => {
   return (
@@ -18,7 +18,7 @@ const Routing = () => {
         <Route path="/signup" component={Signup} />
         <Route path="/about" component={AboutPage} />
         <Route path="/admin" component={Dashboard} />
-        <Route path="/product" component={ProdForm} />
+        <Route path="/product/:productName" component={ProdForm} />
         <Route component={NotFound} />
       </Switch>
     </Router>
