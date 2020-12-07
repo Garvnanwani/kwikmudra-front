@@ -1,21 +1,17 @@
-import React from "react";
-import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
+import React from "react";
 import { useParams } from "react-router-dom";
 import products from "../components/products";
 import useInput from "../hooks/useInput";
-import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
 
 function Copyright() {
   return (
@@ -186,14 +182,14 @@ export default function SignInSide() {
           <Typography component="h1" variant="h5" gutterBottom>
             {product.title}
           </Typography>
-          {product.name == "freecreditscore" ? (
+          {product.name === "freecreditscore" ? (
             <div>
               <CreditScore />
             </div>
           ) : (
             ""
           )}
-          {product.name == "creditcards" ? (
+          {product.name === "creditcards" ? (
             <div>
               <CreditCards />
             </div>
