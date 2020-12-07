@@ -26,10 +26,18 @@ const useStyles = makeStyles((theme) => ({
   heroButtons: {
     marginTop: theme.spacing(4),
   },
+  title: {
+    color: "#fff",
+    fontWeight: "500",
+    // fontSize: "20px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "50px",
+    },
+  },
   cardGrid: {
     // paddingTop: theme.spacing(6),
     // paddingBottom: theme.spacing(6),
-    width: "auto",
+    width: "80%",
     marginLeft: "auto",
     marginRight: "auto",
   },
@@ -39,16 +47,35 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1.3rem",
     flexDirection: "column",
     borderRadius: "15px",
-    // border: "2px solid black",
     backgroundColor: "#fafafa",
     boxShadow: "8px 8px 10px 5px rgba(0,0,0,0.25)",
+    transition: theme.transitions.create(["background", "transform"], {
+      duration: theme.transitions.duration.complex,
+    }),
+    "&:hover": {
+      transform: `scale(1.05)`,
+    },
   },
   cardItem: {
     minWidth: "300px",
     minHeight: "250px",
+    [theme.breakpoints.down("sm")]: {
+      minWidth: "300px",
+      minHeight: "180px",
+    },
   },
   cardContent: {
     flexGrow: 1,
+  },
+  cardHeading: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
+    },
+  },
+  cardBody: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "15px",
+    },
   },
 }));
 
@@ -72,7 +99,7 @@ export default function ProductsPage() {
                 align="center"
                 color="textPrimary"
                 gutterBottom
-                style={{ color: "#fff", fontWeight: "500" }}
+                className={classes.title}
               >
                 Our Products
               </Typography>
@@ -92,18 +119,23 @@ export default function ProductsPage() {
               item
               key={card}
               xs={3}
-              sm={2}
-              md={1}
+              sm={3}
+              md={3}
               // lg={1}
               className={classes.cardItem}
             >
               <Fade down>
                 <Card className={classes.card} variant="outlined">
                   <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                      className={classes.cardHeading}
+                    >
                       Heading
                     </Typography>
-                    <Typography>
+                    <Typography className={classes.cardBody}>
                       This is a media card. You can use this section to describe
                       the content.
                     </Typography>

@@ -1,9 +1,9 @@
-import AboutSection from "../components/AboutSection"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import NavBar from "../components/Navbar"
-import ProductsPage from "../components/ProductsPage"
-import "../styles/App.css"
+import AboutSection from "../components/AboutSection";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import NavBar from "../components/Navbar";
+import ProductsSection from "../components/ProductsSection";
+import "../styles/App.css";
 
 function App() {
   return (
@@ -12,13 +12,13 @@ function App() {
         <NavBar />
         <Header />
       </div>
-      <ProductsPage />
+      <ProductsSection />
       <div className="content">
         <AboutSection />
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
