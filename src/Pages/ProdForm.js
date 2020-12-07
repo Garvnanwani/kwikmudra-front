@@ -8,6 +8,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import TextField from "@material-ui/core/TextField"
 import Typography from "@material-ui/core/Typography"
 import React from "react"
+import { useParams } from "react-router-dom"
+import products from "../components/products"
 
 function Copyright() {
   return (
@@ -43,7 +45,9 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function ProdForm() {
+  const { productName } = useParams()
   const classes = useStyles()
+  const product = products.filter((product) => product.name === productName)
   const [age, setAge] = React.useState("")
 
   const handleChange = (event) => {
@@ -55,7 +59,7 @@ export default function ProdForm() {
       <CssBaseline />
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
-          Title Here
+          {product.title}
         </Typography>
         <form className={classes.form} noValidate>
           <TextField

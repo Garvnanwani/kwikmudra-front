@@ -8,7 +8,6 @@ import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import React from "react"
 import Fade from "react-reveal/Fade"
-import { useParams } from "react-router-dom"
 import products from "./products"
 
 const useStyles = makeStyles((theme) => ({
@@ -91,7 +90,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ProductsPage() {
   const classes = useStyles()
-  const { productName } = useParams()
 
   return (
     <div id="products">
