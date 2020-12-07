@@ -5,6 +5,7 @@ import AboutPage from "./Pages/AboutPage";
 import Dashboard from "./Pages/Admin/Dashboard";
 import App from "./Pages/App";
 import ProdForm from "./Pages/ProdForm";
+import TempForm from "./Pages/TempForm";
 import SignIn from "./Pages/Signin";
 import Signup from "./Pages/Signup";
 import "./styles/index.css";
@@ -18,7 +19,7 @@ const Routing = () => {
         <Route path="/signup" component={Signup} />
         <Route path="/about" component={AboutPage} />
         <Route path="/admin" component={Dashboard} />
-        <Route path="/product/:productName" component={ProdForm} />
+        <Route path="/product/:productName" component={TempForm} />
         <Route component={NotFound} />
       </Switch>
     </Router>

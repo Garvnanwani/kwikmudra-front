@@ -1,24 +1,28 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Link from "@material-ui/core/Link";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
 import React from "react";
+import Avatar from "@material-ui/core/Avatar";
+import Button from "@material-ui/core/Button";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import TextField from "@material-ui/core/TextField";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
+import Link from "@material-ui/core/Link";
+import Paper from "@material-ui/core/Paper";
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import products from "../components/products";
 import useInput from "../hooks/useInput";
+import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="/">
+        Kwik Mudra
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -27,11 +31,29 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    height: "100vh",
+  },
+  image: {
+    backgroundImage: "url(https://source.unsplash.com/random)",
+    // backgroundColor: theme.palette.primary.main,
+    backgroundRepeat: "no-repeat",
+    // backgroundColor:
+    //   theme.palette.type === "light"
+    //     ? theme.palette.grey[50]
+    //     : theme.palette.grey[900],
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  },
   paper: {
-    marginTop: theme.spacing(8),
+    margin: theme.spacing(8, 4),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    width: "40%",
+    [theme.breakpoints.down("sm")]: {
+      width: "80%",
+    },
   },
   avatar: {
     margin: theme.spacing(1),
@@ -46,7 +68,96 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ProdForm() {
+const CreditScore = () => {
+  const classes = useStyles();
+  return (
+    <form className={classes.form} noValidate>
+      <TextField
+        variant="outlined"
+        margin="normal"
+        required
+        fullWidth
+        name="Full Name"
+        label="Full Name"
+        type="text"
+        id="full-name"
+      />
+      <TextField
+        variant="outlined"
+        margin="normal"
+        required
+        fullWidth
+        id="email"
+        label="Email Address"
+        name="email"
+        autoComplete="email"
+        autoFocus
+      />
+      <TextField
+        variant="outlined"
+        margin="normal"
+        required
+        fullWidth
+        name="Phone Number"
+        label="Phone Number"
+        type="number"
+        id="phone-number"
+      />
+      <TextField
+        variant="outlined"
+        margin="normal"
+        required
+        fullWidth
+        name="PAN"
+        label="PAN"
+        type="number"
+        id="pan"
+      />
+      <FormControlLabel
+        control={<Checkbox value="allowExtraEmails" color="primary" />}
+        label="I want to receive inspiration, marketing promotions and updates via email."
+      />
+      <Button
+        type="submit"
+        fullWidth
+        variant="contained"
+        color="primary"
+        className={classes.submit}
+      >
+        Submit
+      </Button>
+    </form>
+  );
+};
+
+const CreditCards = () => {
+  const classes = useStyles();
+  return (
+    <form className={classes.form} noValidate>
+      <TextField
+        variant="outlined"
+        margin="normal"
+        required
+        fullWidth
+        name="Phone Number"
+        label="Phone Number"
+        type="number"
+        id="phone-number"
+      />
+      <Button
+        type="submit"
+        fullWidth
+        variant="contained"
+        color="primary"
+        className={classes.submit}
+      >
+        Submit
+      </Button>
+    </form>
+  );
+};
+
+export default function SignInSide() {
   const { productName } = useParams();
   const classes = useStyles();
   const product_array = products.filter(
@@ -67,16 +178,29 @@ export default function ProdForm() {
   };
 
   return (
-    <div style={{ backgroundColor: "#fff" }}>
-      <Navbar />
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
+    <Grid container component="main" className={classes.root}>
+      <CssBaseline />
+      <Grid item xs={false} sm={4} md={4} className={classes.image} />
+      <Grid item xs={12} sm={8} md={8} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Typography component="h1" variant="h3" gutterBottom>
+          <Typography component="h1" variant="h5" gutterBottom>
             {product.title}
           </Typography>
-          {/* { product.title==="freecreditscore" ? () : ()} */}
-          <form className={classes.form} noValidate>
+          {product.name == "freecreditscore" ? (
+            <div>
+              <CreditScore />
+            </div>
+          ) : (
+            ""
+          )}
+          {product.name == "creditcards" ? (
+            <div>
+              <CreditCards />
+            </div>
+          ) : (
+            ""
+          )}
+          {/* <form className={classes.form} noValidate>
             <TextField
               variant="outlined"
               margin="normal"
@@ -196,12 +320,9 @@ export default function ProdForm() {
             >
               Submit
             </Button>
-          </form>
+          </form> */}
         </div>
-        <Box mt={8}>
-          <Copyright />
-        </Box>
-      </Container>
-    </div>
+      </Grid>
+    </Grid>
   );
 }
