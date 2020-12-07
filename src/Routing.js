@@ -1,14 +1,13 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NotFound from "./components/NotFound";
-import AboutPage from "./Pages/AboutPage";
-import Dashboard from "./Pages/Admin/Dashboard";
-import App from "./Pages/App";
-import ProdForm from "./Pages/ProdForm";
-import TempForm from "./Pages/TempForm";
-import SignIn from "./Pages/Signin";
-import Signup from "./Pages/Signup";
-import "./styles/index.css";
+import React from "react"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import NotFound from "./components/NotFound"
+import AboutPage from "./Pages/AboutPage"
+import Dashboard from "./Pages/Admin/Dashboard"
+import App from "./Pages/App"
+import SignIn from "./Pages/Signin"
+import Signup from "./Pages/Signup"
+import TempForm from "./Pages/TempForm"
+import "./styles/index.css"
 
 const Routing = () => {
   return (
@@ -23,7 +22,7 @@ const Routing = () => {
         <Route component={NotFound} />
       </Switch>
     </Router>
-  );
-};
+  )
+}
 
-export default Routing;
+export default Routing

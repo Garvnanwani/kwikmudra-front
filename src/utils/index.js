@@ -1,7 +1,7 @@
 export const client = (endpoint, { body, ...customConfig } = {}) => {
   const token = localStorage.getItem("token")
   const headers = { "Content-Type": "application/json" }
-
+  console.log(process.env.REACT_APP_BACKEND_URL)
   if (token) {
     headers.Authorization = `Bearer ${token}`
   }

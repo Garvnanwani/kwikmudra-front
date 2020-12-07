@@ -1,21 +1,21 @@
-import Avatar from "@material-ui/core/Avatar";
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
-import Link from "@material-ui/core/Link";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
-import { toast } from "react-toastify";
-import Navbar from "../components/Navbar";
-import { UserContext } from "../context/UserContext";
-import useInput from "../hooks/useInput";
-import { client } from "../utils";
+import Avatar from "@material-ui/core/Avatar"
+import Box from "@material-ui/core/Box"
+import Button from "@material-ui/core/Button"
+import Container from "@material-ui/core/Container"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import Grid from "@material-ui/core/Grid"
+import Link from "@material-ui/core/Link"
+import { makeStyles } from "@material-ui/core/styles"
+import TextField from "@material-ui/core/TextField"
+import Typography from "@material-ui/core/Typography"
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined"
+import React, { useContext } from "react"
+import { useHistory } from "react-router-dom"
+import { toast } from "react-toastify"
+import Navbar from "../components/Navbar"
+import { UserContext } from "../context/UserContext"
+import useInput from "../hooks/useInput"
+import { client } from "../utils"
 
 // import {Link} from "react-router-dom"
 
@@ -29,7 +29,7 @@ function Copyright() {
       {new Date().getFullYear()}
       {"."}
     </Typography>
-  );
+  )
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -50,20 +50,20 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+}))
 
 const SignUp = () => {
-  const { setUser } = useContext(UserContext);
-  const fullName = useInput("");
-  const username = useInput("");
-  const email = useInput("");
-  const password = useInput("");
-  const referralCode = useInput("");
-  const history = useHistory();
-  const classes = useStyles();
+  const { setUser } = useContext(UserContext)
+  const fullName = useInput("")
+  const username = useInput("")
+  const email = useInput("")
+  const password = useInput("")
+  const referralCode = useInput("")
+  const history = useHistory()
+  const classes = useStyles()
 
   const handleSignup = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (
       !fullName.value ||
@@ -72,14 +72,14 @@ const SignUp = () => {
       !username.value ||
       !referralCode.value
     ) {
-      return toast.error("Please fill in all the fields");
+      return toast.error("Please fill in all the fields")
     }
 
-    const re = /^[a-z0-9]+$/i;
+    const re = /^[a-z0-9]+$/i
     if (re.exec(username.value) === null) {
       return toast.error(
         "The username you entered is not acceptable, try again"
-      );
+      )
     }
 
     const body = {
@@ -88,26 +88,26 @@ const SignUp = () => {
       username: username.value,
       fullName: fullName.value,
       referralCode: referralCode.value,
-    };
-
-    try {
-      const { token } = await client("/auth/signup", { body });
-      localStorage.setItem("token", token);
-    } catch (err) {
-      return toast.error(err.message);
     }
 
-    const user = await client("/auth/userprofile");
-    setUser(user.data);
-    localStorage.setItem("user", JSON.stringify(user.data));
+    try {
+      const { token } = await client("/auth/signup", { body })
+      localStorage.setItem("token", token)
+      console.log({ token })
+    } catch (err) {
+      return toast.error(err.message)
+    }
+    const user = await client("/auth/userprofile")
+    setUser(user.data)
+    localStorage.setItem("user", JSON.stringify(user.data))
 
-    username.setValue("");
-    password.setValue("");
-    email.setValue("");
-    fullName.setValue("");
-    referralCode.setValue("");
-    history.push("/");
-  };
+    username.setValue("")
+    password.setValue("")
+    email.setValue("")
+    fullName.setValue("")
+    referralCode.setValue("")
+    history.push("/")
+  }
 
   return (
     <div
@@ -240,7 +240,7 @@ const SignUp = () => {
         </Box>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default SignUp;
+export default SignUp
