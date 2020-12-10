@@ -13,6 +13,7 @@ import { Link } from "@material-ui/core";
 import Logo from "../assets/logo.png";
 import Fade from "react-reveal/Fade";
 import { UserContext } from "../context/UserContext";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -105,45 +106,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const handleLogout = (user) => {
-  if (user && localStorage.getItem("user")) {
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
-  }
-};
-
-const SignInButton = () => {
-  const classes = useStyles();
-  return (
-    <Button
-      className={classes.myButton}
-      variant="contained"
-      color="primary"
-      // size="small"
-    >
-      Sign In
-    </Button>
-  );
-};
-
-const LogOutButton = () => {
-  const classes = useStyles();
-  return (
-    <Button
-      className={classes.logOutButton}
-      variant="contained"
-      color="primary"
-      onClick={handleLogout}
-      // size="small"
-    >
-      Log out
-    </Button>
-  );
-};
-
 export default function PrimarySearchAppBar() {
-  const { user } = useContext(UserContext);
-  console.log(user);
+  const { user, isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+  const history = useHistory();
 
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -152,12 +117,53 @@ export default function PrimarySearchAppBar() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+  // const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+
+  const SignInButton = () => {
+    const classes = useStyles();
+    return (
+      <Button
+        className={classes.myButton}
+        variant="contained"
+        color="primary"
+        // size="small"
+      >
+        Sign In
+      </Button>
+    );
+  };
+
+  const LogOutButton = () => {
+    const classes = useStyles();
+    return (
+      <Button
+        className={classes.logOutButton}
+        variant="contained"
+        color="primary"
+        onClick={handleLogout}
+        // size="small"
+      >
+        Log out
+      </Button>
+    );
+  };
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
+  };
+
+  const handleLogout = (user) => {
+    if (user && localStorage.getItem("user")) {
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
+      // setIsLoggedIn(!isLoggedIn);
+      setIsLoggedIn(false);
+
+      history.push("/signin");
+    }
   };
 
   const handleMenuClose = () => {
@@ -208,7 +214,7 @@ export default function PrimarySearchAppBar() {
           </Badge>
         </IconButton> */}
 
-          <p>Out Products</p>
+          <p>Our Products</p>
         </MenuItem>
       </Link>
       <Link href="/about" style={{ textDecoration: "none" }}>
@@ -228,7 +234,8 @@ export default function PrimarySearchAppBar() {
           aria-haspopup="true"
           color="inherit"
         >
-          {user ? <LogOutButton /> : <SignInButton />}
+          {user && !isLoggedIn ? <LogOutButton /> : <SignInButton />}
+          {console.log(isLoggedIn)}
         </IconButton>
       </MenuItem>
     </Menu>
@@ -317,7 +324,7 @@ export default function PrimarySearchAppBar() {
           </Toolbar>
         </AppBar>
         {renderMobileMenu}
-        {user ? "" : { renderMenu }}
+        {renderMenu}
       </Fade>
     </div>
   );

@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn() {
-  const { setUser } = useContext(UserContext);
+  const { setUser, setIsLoggedIn } = useContext(UserContext);
   const username = useInput("");
   const password = useInput("");
   const history = useHistory();
@@ -73,25 +73,29 @@ export default function SignIn() {
       return toast.error("Please fill in both the fields");
     }
 
-    const body = { username: username.value, password: password.value, role: loginType };
+    const body = {
+      username: username.value,
+      password: password.value,
+      role: loginType,
+    };
 
     try {
       const { token } = await client("/auth/login", { body });
       localStorage.setItem("token", token);
+      setIsLoggedIn(true);
     } catch (err) {
       return toast.error(err.message);
     }
-
     const user = await client("/auth/userprofile");
     localStorage.setItem("user", JSON.stringify(user.data));
+    console.log("user : ", user);
+    console.log("user data ", user.data);
     setUser(user.data);
     toast.success("Login successful");
-
     username.setValue("");
     password.setValue("");
-    history.push('/')
+    history.push("/");
   };
-
 
   return (
     <div
