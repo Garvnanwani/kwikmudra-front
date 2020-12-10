@@ -11,20 +11,23 @@ import {
 import Title from "./Title";
 
 // Generate Sales Data
-function createData(time, amount) {
-  return { time, amount };
+function createData(month, amount) {
+  return { month, amount };
 }
 
 const data = [
-  createData("00:00", 0),
-  createData("03:00", 300),
-  createData("06:00", 600),
-  createData("09:00", 800),
-  createData("12:00", 1500),
-  createData("15:00", 2000),
-  createData("18:00", 2400),
-  createData("21:00", 2400),
-  createData("24:00", undefined),
+  createData("Jan", 0),
+  createData("Feb", 300),
+  createData("Mar", 600),
+  createData("Apr", 800),
+  createData("May", 1500),
+  createData("Jun", 2000),
+  createData("Jul", 2400),
+  createData("Aug", 2400),
+  createData("Sep", 1500),
+  createData("Oct", 2500),
+  createData("Nov", 2100),
+  createData("Dec", 2000),
 ];
 
 export default function Chart() {
@@ -32,7 +35,7 @@ export default function Chart() {
 
   return (
     <React.Fragment>
-      <Title>Today</Title>
+      {/* <Title>Today</Title> */}
       <ResponsiveContainer>
         <LineChart
           data={data}
@@ -43,14 +46,14 @@ export default function Chart() {
             left: 24,
           }}
         >
-          <XAxis dataKey="time" stroke={theme.palette.text.secondary} />
+          <XAxis dataKey="month" stroke={theme.palette.text.secondary} />
           <YAxis stroke={theme.palette.text.secondary}>
             <Label
               angle={270}
               position="left"
               style={{ textAnchor: "middle", fill: theme.palette.text.primary }}
             >
-              Sales ($)
+              Commission (₹)
             </Label>
           </YAxis>
           <Line

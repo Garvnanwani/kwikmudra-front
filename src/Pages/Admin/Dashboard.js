@@ -1,40 +1,44 @@
-import AppBar from "@material-ui/core/AppBar"
-import Box from "@material-ui/core/Box"
-import Container from "@material-ui/core/Container"
-import CssBaseline from "@material-ui/core/CssBaseline"
-import Divider from "@material-ui/core/Divider"
-import Drawer from "@material-ui/core/Drawer"
-import Grid from "@material-ui/core/Grid"
-import IconButton from "@material-ui/core/IconButton"
-import Link from "@material-ui/core/Link"
-import List from "@material-ui/core/List"
-import Paper from "@material-ui/core/Paper"
-import { makeStyles } from "@material-ui/core/styles"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
-import MenuIcon from "@material-ui/icons/Menu"
-import clsx from "clsx"
-import React from "react"
-import Chart from "./Chart"
-import Deposits from "./Deposits"
-import { mainListItems, secondaryListItems } from "./ListItem"
-import Orders from "./Orders"
+import AppBar from "@material-ui/core/AppBar";
+import Box from "@material-ui/core/Box";
+import Container from "@material-ui/core/Container";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Divider from "@material-ui/core/Divider";
+import Drawer from "@material-ui/core/Drawer";
+import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import Link from "@material-ui/core/Link";
+import List from "@material-ui/core/List";
+import Paper from "@material-ui/core/Paper";
+import { makeStyles } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import MenuIcon from "@material-ui/icons/Menu";
+import clsx from "clsx";
+import React from "react";
+import Chart from "./Chart";
+import Deposits from "./Deposits";
+import { mainListItems, secondaryListItems } from "./ListItem";
+import Orders from "./Orders";
+import products from "../../components/products";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="/">
+        Kwik Mudra
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
-  )
+  );
 }
 
-const drawerWidth = 240
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -113,18 +117,66 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 240,
   },
-}))
+  cardGrid: {
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(3),
+  },
+  card: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "80px",
+    [theme.breakpoints.down("sm")]: {
+      height: "120px",
+    },
+    marginBottom: "16px",
+    borderRadius: "15px",
+    backgroundColor: theme.palette.primary.main,
+    color: "#fff",
+    transition: theme.transitions.create(["background", "transform"], {
+      duration: theme.transitions.duration.standard,
+    }),
+    "&:hover": {
+      transform: `scale(1.05)`,
+      cursor: "pointer",
+    },
+  },
+  cardItem: {
+    minWidth: "200px",
+    // minHeight: "250px",
+    [theme.breakpoints.down("sm")]: {
+      minWidth: "200px",
+      minHeight: "120px",
+    },
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  cardHeading: {
+    fontWeight: theme.typography.fontWeightRegular,
+    fontSize: "20px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
+    },
+  },
+  cardBody: {
+    // textAlign: "left !important",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "15px",
+    },
+  },
+}));
 
 export default function Dashboard() {
-  const classes = useStyles()
-  const [open, setOpen] = React.useState(true)
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
   const handleDrawerClose = () => {
-    setOpen(false)
-  }
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight)
+    setOpen(false);
+  };
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -153,7 +205,7 @@ export default function Dashboard() {
             noWrap
             className={classes.title}
           >
-            Dashboard
+            Admin Name Here
           </Typography>
         </Toolbar>
       </AppBar>
@@ -186,15 +238,59 @@ export default function Dashboard() {
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
+              <Paper
+                className={fixedHeightPaper}
+                style={{ justifyContent: "center" }}
+              >
                 <Deposits />
               </Paper>
             </Grid>
             {/* Recent Orders */}
             <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Orders />
-              </Paper>
+              <Typography
+                variant="h4"
+                gutterBottom
+                style={{ marginTop: "20px" }}
+              >
+                Products
+              </Typography>
+              {/* <Paper className={classes.paper}> */}
+              <Grid
+                container
+                spacing={3}
+                justify="center"
+                alignItems="center"
+                className={classes.cardGrid}
+              >
+                {products.map((card, key) => (
+                  <Grid
+                    item
+                    key={key}
+                    xs={3}
+                    sm={3}
+                    md={3}
+                    // lg={1}
+                    className={classes.cardItem}
+                  >
+                    <Link href="#" style={{ textDecoration: "none" }}>
+                      <Card className={classes.card} variant="outlined">
+                        <CardContent className={classes.cardContent}>
+                          <Typography
+                            variant="h5"
+                            component="h2"
+                            className={classes.cardHeading}
+                          >
+                            {card.title}
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </Grid>
+                ))}
+              </Grid>
+
+              {/* <Orders /> */}
+              {/* </Paper> */}
             </Grid>
           </Grid>
           <Box pt={4}>
@@ -203,5 +299,5 @@ export default function Dashboard() {
         </Container>
       </main>
     </div>
-  )
+  );
 }
