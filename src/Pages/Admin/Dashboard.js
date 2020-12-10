@@ -224,7 +224,13 @@ export default function Dashboard() {
         <Divider />
         <List>{mainListItems}</List>
         <Divider />
-        <List>{secondaryListItems}</List>
+        <List primary="Name">
+          <div style={{ marginTop: "10px" }}>
+            <Typography variant="h6">Admin Name Here</Typography>
+            <Typography variant="body1">Username here</Typography>
+          </div>
+        </List>
+        {/* <List>{secondaryListItems}</List> */}
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
