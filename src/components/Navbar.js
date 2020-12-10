@@ -8,10 +8,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "@material-ui/core";
 import Logo from "../assets/logo.png";
 import Fade from "react-reveal/Fade";
+import { UserContext } from "../context/UserContext";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -63,6 +64,26 @@ const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
     },
   },
+  logOutButton: {
+    paddingTop: "5px",
+    paddingBottom: "5px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    transition: theme.transitions.create(
+      ["background", "transform", "color", "background-color"],
+      {
+        duration: theme.transitions.duration.standard,
+      }
+    ),
+    "&:hover": {
+      transform: `scale(1.05)`,
+      border: "1px solid",
+      color: theme.palette.primary.main,
+      borderColor: theme.palette.primary.main,
+      backgroundColor: "#fff",
+      cursor: "pointer",
+    },
+  },
   logo: {
     height: "100px",
     marginTop: "5px",
@@ -70,43 +91,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
   },
-  //   search: {
-  //     position: "relative",
-  //     borderRadius: theme.shape.borderRadius,
-  //     backgroundColor: fade(theme.palette.common.white, 0.15),
-  //     "&:hover": {
-  //       backgroundColor: fade(theme.palette.common.white, 0.25),
-  //     },
-  //     marginRight: theme.spacing(2),
-  //     marginLeft: 0,
-  //     width: "100%",
-  //     [theme.breakpoints.up("sm")]: {
-  //       marginLeft: theme.spacing(3),
-  //       width: "auto",
-  //     },
-  //   },
-  //   searchIcon: {
-  //     padding: theme.spacing(0, 2),
-  //     height: "100%",
-  //     position: "absolute",
-  //     pointerEvents: "none",
-  //     display: "flex",
-  //     alignItems: "center",
-  //     justifyContent: "center",
-  //   },
-  //   inputRoot: {
-  //     color: "inherit",
-  //   },
-  //   inputInput: {
-  //     padding: theme.spacing(1, 1, 1, 0),
-  //     // vertical padding + font size from searchIcon
-  //     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-  //     transition: theme.transitions.create("width"),
-  //     width: "100%",
-  //     [theme.breakpoints.up("md")]: {
-  //       width: "20ch",
-  //     },
-  //   },
   sectionDesktop: {
     display: "none",
     [theme.breakpoints.up("md")]: {
@@ -121,7 +105,46 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const handleLogout = (user) => {
+  if (user && localStorage.getItem("user")) {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+  }
+};
+
+const SignInButton = () => {
+  const classes = useStyles();
+  return (
+    <Button
+      className={classes.myButton}
+      variant="contained"
+      color="primary"
+      // size="small"
+    >
+      Sign In
+    </Button>
+  );
+};
+
+const LogOutButton = () => {
+  const classes = useStyles();
+  return (
+    <Button
+      className={classes.logOutButton}
+      variant="contained"
+      color="primary"
+      onClick={handleLogout}
+      // size="small"
+    >
+      Log out
+    </Button>
+  );
+};
+
 export default function PrimarySearchAppBar() {
+  const { user } = useContext(UserContext);
+  console.log(user);
+
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -205,14 +228,7 @@ export default function PrimarySearchAppBar() {
           aria-haspopup="true"
           color="inherit"
         >
-          <Button
-            className={classes.myButton}
-            variant="contained"
-            color="primary"
-            // size="small"
-          >
-            Sign In
-          </Button>
+          {user ? <LogOutButton /> : <SignInButton />}
         </IconButton>
       </MenuItem>
     </Menu>
@@ -284,14 +300,7 @@ export default function PrimarySearchAppBar() {
                 color="inherit"
               >
                 {/* <AccountCircle /> */}
-                <Button
-                  className={classes.myButton}
-                  variant="contained"
-                  color="primary"
-                  // size="small"
-                >
-                  Sign In
-                </Button>
+                {user ? <LogOutButton /> : <SignInButton />}
               </IconButton>
             </div>
             <div className={classes.sectionMobile}>
@@ -308,7 +317,7 @@ export default function PrimarySearchAppBar() {
           </Toolbar>
         </AppBar>
         {renderMobileMenu}
-        {renderMenu}
+        {user ? "" : { renderMenu }}
       </Fade>
     </div>
   );
