@@ -1,13 +1,13 @@
-import { Card, CardContent, Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Grid } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import React from "react"
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(8),
     backgroundColor: "#fff",
     maxWidth: "85%",
@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
     },
+  },
+  productsGrid: {
+    padding: theme.spacing(5),
   },
   imgSection: {
     // float: "right",
@@ -51,10 +54,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "-webkit-center",
     alignSelf: "stretch",
   },
-}));
+  heading: {
+    color: theme.palette.primary.main,
+  },
+}))
 
 export default function AboutPage() {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div>
       <Navbar />
@@ -68,7 +74,12 @@ export default function AboutPage() {
         >
           <Grid item xs={12}>
             <div className={classes.textSection}>
-              <Typography variant="h3" component="h3" gutterBottom>
+              <Typography
+                variant="h3"
+                component="h3"
+                gutterBottom
+                className={classes.heading}
+              >
                 Our Vision
               </Typography>
               <Typography variant="body1">
@@ -81,7 +92,12 @@ export default function AboutPage() {
 
           <Grid item xs={12}>
             <div className={classes.textSection}>
-              <Typography variant="h3" component="h3" gutterBottom>
+              <Typography
+                variant="h3"
+                component="h3"
+                gutterBottom
+                className={classes.heading}
+              >
                 Who are we?
               </Typography>
               <Typography variant="body1">
@@ -99,7 +115,12 @@ export default function AboutPage() {
 
           <Grid item xs={12}>
             <div className={classes.textSection}>
-              <Typography variant="h3" component="h3" gutterBottom>
+              <Typography
+                variant="h3"
+                component="h3"
+                gutterBottom
+                className={classes.heading}
+              >
                 What we do?
               </Typography>
               <Typography variant="body1">
@@ -108,7 +129,12 @@ export default function AboutPage() {
                 look out for the best accessible options on Loans and Credit
                 Cards for your profile with only a couple of clicks.
               </Typography>
-              <Typography variant="body2">
+              <Typography
+                variant="body2"
+                style={{
+                  margin: "2rem 0",
+                }}
+              >
                 <ul>
                   <li>
                     We offer free customized help for Loans, Credit Cards and
@@ -163,12 +189,16 @@ export default function AboutPage() {
           </Grid>
 
           <Grid item xs={12}>
-            <Typography variant="h3"> Our Most Popular Products </Typography>
+            <Typography variant="h3" className={classes.heading}>
+              {" "}
+              Our Most Popular Products{" "}
+            </Typography>
             <Grid
               container
               direction="row"
               justify="center"
               alignItems="center"
+              className={classes.productsGrid}
             >
               <Grid item xs={12} sm={6}>
                 <Typography variant="h4"> Personal Loans </Typography>
@@ -221,9 +251,17 @@ export default function AboutPage() {
               direction="row"
               justify="center"
               alignItems="center"
+              style={{
+                background: "#DF6B57",
+              }}
             >
               <Grid item xs={12} sm={6}>
-                <Typography variant="body1">
+                <Typography
+                  variant="body1"
+                  style={{
+                    marginRight: "1.5rem",
+                  }}
+                >
                   Pick MakeMyBachat to settle on an informed credit choice. We
                   are passionate about improving the borrowing excursion of
                   customers in India. Consolidating important input of our 40
@@ -237,6 +275,12 @@ export default function AboutPage() {
                 <img
                   src="http://lorempixel.com/640/480/business"
                   alt="bsuiness-img"
+                  style={{
+                    marginRight: "2.5rem",
+                    border: "2px solid black",
+                    width: "100%",
+                    height: "auto",
+                  }}
                 />
               </Grid>
             </Grid>
@@ -372,5 +416,5 @@ export default function AboutPage() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }
