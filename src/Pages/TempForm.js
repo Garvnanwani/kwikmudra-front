@@ -1,17 +1,17 @@
-import Button from "@material-ui/core/Button";
-import Checkbox from "@material-ui/core/Checkbox";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Grid from "@material-ui/core/Grid";
-import Link from "@material-ui/core/Link";
-import Paper from "@material-ui/core/Paper";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import React from "react";
-import { useParams } from "react-router-dom";
-import products from "../components/products";
-import useInput from "../hooks/useInput";
+import Button from "@material-ui/core/Button"
+import Checkbox from "@material-ui/core/Checkbox"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import FormControlLabel from "@material-ui/core/FormControlLabel"
+import Grid from "@material-ui/core/Grid"
+import Link from "@material-ui/core/Link"
+import Paper from "@material-ui/core/Paper"
+import { makeStyles } from "@material-ui/core/styles"
+import TextField from "@material-ui/core/TextField"
+import Typography from "@material-ui/core/Typography"
+import React from "react"
+import { useParams } from "react-router-dom"
+import products from "../components/products"
+import useInput from "../hooks/useInput"
 
 function Copyright() {
   return (
@@ -23,7 +23,7 @@ function Copyright() {
       {new Date().getFullYear()}
       {"."}
     </Typography>
-  );
+  )
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    width: "40%",
+    width: "70%",
     [theme.breakpoints.down("sm")]: {
       width: "80%",
     },
@@ -62,72 +62,75 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+}))
 
-const CreditScore = () => {
-  const classes = useStyles();
+const LifeInsurance = ({ product }) => {
+  const classes = useStyles()
   return (
-    <form className={classes.form} noValidate>
-      <TextField
-        variant="outlined"
-        margin="normal"
-        required
-        fullWidth
-        name="Full Name"
-        label="Full Name"
-        type="text"
-        id="full-name"
-      />
-      <TextField
-        variant="outlined"
-        margin="normal"
-        required
-        fullWidth
-        id="email"
-        label="Email Address"
-        name="email"
-        autoComplete="email"
-        autoFocus
-      />
-      <TextField
-        variant="outlined"
-        margin="normal"
-        required
-        fullWidth
-        name="Phone Number"
-        label="Phone Number"
-        type="number"
-        id="phone-number"
-      />
-      <TextField
-        variant="outlined"
-        margin="normal"
-        required
-        fullWidth
-        name="PAN"
-        label="PAN"
-        type="number"
-        id="pan"
-      />
-      <FormControlLabel
-        control={<Checkbox value="allowExtraEmails" color="primary" />}
-        label="I want to receive inspiration, marketing promotions and updates via email."
-      />
-      <Button
-        type="submit"
-        fullWidth
-        variant="contained"
-        color="primary"
-        className={classes.submit}
-      >
-        Submit
-      </Button>
-    </form>
-  );
-};
+    <>
+      <form className={classes.form} noValidate>
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          name="Full Name"
+          label="Full Name"
+          type="text"
+          id="full-name"
+        />
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          id="email"
+          label="Email Address"
+          name="email"
+          autoComplete="email"
+          autoFocus
+        />
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          name="Phone Number"
+          label="Phone Number"
+          type="number"
+          id="phone-number"
+        />
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          name="PAN"
+          label="PAN"
+          type="number"
+          id="pan"
+        />
+        <FormControlLabel
+          control={<Checkbox value="allowExtraEmails" color="primary" />}
+          label="I want to receive inspiration, marketing promotions and updates via email."
+        />
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          color="primary"
+          className={classes.submit}
+        >
+          Submit
+        </Button>
+      </form>
+      <Typography variant="pre">{product.desc}</Typography>
+    </>
+  )
+}
 
 const CreditCards = () => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <form className={classes.form} noValidate>
       <TextField
@@ -150,28 +153,28 @@ const CreditCards = () => {
         Submit
       </Button>
     </form>
-  );
-};
+  )
+}
 
 export default function SignInSide() {
-  const { productName } = useParams();
-  const classes = useStyles();
+  const { productName } = useParams()
+  const classes = useStyles()
   const product_array = products.filter(
     (product) => product.name === productName
-  );
-  const product = product_array[0];
-  const fullName = useInput("");
-  const dob = useInput("");
-  const pan = useInput("");
-  const pinCode = useInput("");
-  const mobileNumber = useInput("");
-  const email = useInput("");
+  )
+  const product = product_array[0]
+  const fullName = useInput("")
+  const dob = useInput("")
+  const pan = useInput("")
+  const pinCode = useInput("")
+  const mobileNumber = useInput("")
+  const email = useInput("")
 
-  const [age, setAge] = React.useState("");
+  const [age, setAge] = React.useState("")
 
   const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+    setAge(event.target.value)
+  }
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -184,7 +187,7 @@ export default function SignInSide() {
           </Typography>
           {product.name === "freecreditscore" ? (
             <div>
-              <CreditScore />
+              <LifeInsurance product={product} />
             </div>
           ) : (
             ""
@@ -320,5 +323,5 @@ export default function SignInSide() {
         </div>
       </Grid>
     </Grid>
-  );
+  )
 }

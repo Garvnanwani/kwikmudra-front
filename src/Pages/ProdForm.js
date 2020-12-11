@@ -1,17 +1,17 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Link from "@material-ui/core/Link";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import React from "react";
-import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import products from "../components/products";
-import useInput from "../hooks/useInput";
+import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core"
+import Box from "@material-ui/core/Box"
+import Button from "@material-ui/core/Button"
+import Container from "@material-ui/core/Container"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import Link from "@material-ui/core/Link"
+import { makeStyles } from "@material-ui/core/styles"
+import TextField from "@material-ui/core/TextField"
+import Typography from "@material-ui/core/Typography"
+import React from "react"
+import { useParams } from "react-router-dom"
+import Navbar from "../components/Navbar"
+import products from "../components/products"
+import useInput from "../hooks/useInput"
 
 function Copyright() {
   return (
@@ -23,7 +23,7 @@ function Copyright() {
       {new Date().getFullYear()}
       {"."}
     </Typography>
-  );
+  )
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -44,27 +44,27 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+}))
 
 export default function ProdForm() {
-  const { productName } = useParams();
-  const classes = useStyles();
+  const { productName } = useParams()
+  const classes = useStyles()
   const product_array = products.filter(
     (product) => product.name === productName
-  );
-  const product = product_array[0];
-  const fullName = useInput("");
-  const dob = useInput("");
-  const pan = useInput("");
-  const pinCode = useInput("");
-  const mobileNumber = useInput("");
-  const email = useInput("");
+  )
+  const product = product_array[0]
+  const fullName = useInput("")
+  const dob = useInput("")
+  const pan = useInput("")
+  const pinCode = useInput("")
+  const mobileNumber = useInput("")
+  const email = useInput("")
 
-  const [age, setAge] = React.useState("");
+  const [age, setAge] = React.useState("")
 
   const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+    setAge(event.target.value)
+  }
 
   return (
     <div style={{ backgroundColor: "#fff" }}>
@@ -198,10 +198,11 @@ export default function ProdForm() {
             </Button>
           </form>
         </div>
+        <Typography variant="p">{product.desc}</Typography>
         <Box mt={8}>
           <Copyright />
         </Box>
       </Container>
     </div>
-  );
+  )
 }
