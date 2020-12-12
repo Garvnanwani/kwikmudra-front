@@ -1,13 +1,13 @@
 const products = [
   {
     title: "Life Insurance",
-    desc: `Life Insurance is an agreement between an insurer and a policyholder in which the insurer ensures payment of a death benefit to named beneficiaries when the insured dies.`,
+    desc: `Life Insurance is an agreement between an insurer and a policyholder.`,
     link: "/product/lifeinsurance",
     name: "lifeinsurance",
   },
   {
     title: "Home Loan",
-    desc: `A home loan is an amount of money that an individual borrows from a bank or money lending agency at a specific rate of interest to be paid with the EMI monthly.`,
+    desc: `A home loan is an amount of money that an individual borrows from a bank or money lending agency`,
     link: "/product/homeloan",
     name: "homeloan",
   },
