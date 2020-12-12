@@ -49,12 +49,6 @@ const products = [
   //   name: "transferpersonalloan",
   // },
   {
-    title: "Home Loan",
-    desc: "Compare & choose from lowest interest rates for your dream home",
-    link: "/product/homeloan",
-    name: "homeloan",
-  },
-  {
     title: "Term Insurance",
     desc: "Get better interest rates on your existing personal loan",
     link: "/product/terminsurance",
@@ -83,12 +77,6 @@ const products = [
     desc: "Meet your liquidity needs by securing a loan against your gold",
     link: "/product/goldloan",
     name: "goldloan",
-  },
-  {
-    title: "Life Insurance",
-    desc: "Get insurance for your loved ones & secure their future",
-    link: "/product/lifeinsurance",
-    name: "lifeinsurance",
   },
   {
     title: "Health Insurance",
