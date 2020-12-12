@@ -1,130 +1,13 @@
 const products = [
   {
     title: "Life Insurance",
-    desc: `What Is Life Insurance?
-Life Insurance is an agreement between an insurer and a policyholder in which the insurer ensures payment of a death benefit to named beneficiaries when the insured dies. The insurance agency guarantees a demise advantage in return for premiums paid by the policyholder.
-KEY TAKEAWAYS
-Life insurance is a legitimately binding agreement.
-For the agreement to be enforceable, the life insurance application should precisely reveal the insured's past and current health conditions and high-risk activities.
-For a life insurance policy to remain in power, the policyholder must pay a solitary premium in advance or pay regular premiums after some time.
-When the insured dies, the policy's named recipients will get the policy's presumptive worth, or death benefit.
-Term life insurance policies lapse after a specific number of years. Perpetual life insurance policies stay dynamic until the insured dies, quits paying premiums, or gives up the poliy.
-A life insurance policy is in the same class as the financial strength of the organization that issues it. State assurance assets may pay claims if the issuer can't.
-
-Who Should Buy Life Insurance?
-Life insurance provides financial support to enduring wards or different recipients after the passing of an insured. Here are a few instances of individuals who may require extra security:
-Guardians with minor kids – If a parent dies, the loss of their salary or caregiving skills  could create a money related difficulty. Life Insurance can ensure the children will have the money related assets they need until they can bolster themselves.
-Guardians with special-needs adult kids – For kids who require lifelong care and will never be self-sufficient, life insurance can ensure their necessities will be met after their folks die. The death benefit can be utilized to subsidize a special needs trust that a guardian will manage for the grown-up kid's advantage.
-Adults who own property together – Married or not, if the demise of one adult would imply that the other could no longer bear the cost of loan installments, upkeep, and taxes on the property, life insurance might be a smart thought. An example would be an engaged couple who took out a joint mortgage to purchase their first house.
-Elderly parents who want to leave money to adult kids – Many adult children sacrifice by taking time off work to think about an old parent who needs assistance. This assistance may likewise incorporate direct money related help. Life insurance can help repay the adult kid's costs afer the death of his parents.
-Young adults whose parents incurred loan costs for private student loan debts or cosigned a loan for them– Young adults without dependetnts rarely need life insurance, however on the off chance that a parent will be on the hook for a kid's debt after their demise, the child might need to carry enough life insurance to pay off the debt.
-Youthful adults who need to secure low rates – The younger and healthier you are, the lower your insurance premiums. A 20-something grown-up might purchase an approach even without having dependants if there is a desire to have them later on.
-Rich families who hope to owe estate taxes – Life insurance can provide funds to cover the taxes and keep the full estimation of the estate intact.
-Families who can't bear burial and funeral service costs – A small life insurance policy can provide funds to honor a friend or family member's passing.
-Organizations with key workers – If the passing of a key employee, for example, a CEO, would make an extreme budgetary difficulty for a firm, that firm may have an insurable interest that will allow it to buy a life insurance poicy on that representative.
-Married pensioners– Instead of picking between a pension payout that offers a spousal advantage and one that doesn't, pensioners can decide to accept their full benefits and utilize a portion of the cash to purchase life insurance to profit their life partner. This system is called pension maximization.
-
-How Life Insurance Works
-
-A life insurance policy has two principle segments - a death benefit and a premium. Term life insurance has these two parts, however permanent or whole life insurance policies likewise have a cash value element.
-Death Benefit – The death benefit or face value is the amount of money the insurance agency guarantees  to the beneficiaries recognized in the policy when the insured dies. The insured may be a parent, and the beneficiaries may be their youngsters, for instance. The insured will pick the ideal death benefit sum dependent on the beneficiaries' estimated future requirements. The insurance agency will decide if there is an insurable interest and if the proposed insured fits for the coverage based on the company's pre-mentioned requirements related to age, health, and any risky activities wherein the proposed insured takes an interest.
-Premium – Premiums are the money the policyholder pays for the insurance. The insurer must pay the death benefit when the insured dies. If the policyholder pays the premiums as required, and premiums are determined to some extent by how likely it is that the insurer will have to pay the policy's death benefit dependent on the insured's life expectancy. Elements that influence life expectancy incorporate the insured's age, sex, clinical history, occpational hazards, and high-risk leisure activities. Some portion of the premium additionally goes toward the insurance agency's working costs. Premiums are higher on policies with larger death benefits, people who are at higher risk, and permanent policies that accumulate cash value.
-Cash Value – The cash value of permanent life insurance fulfils two needs. It is a savings account that the policyholder can use during the life of the insured; the cash aggregates on a tax-deferred premise. Some policies may have limitations on withdrawals depending upon how the cash is to be utilized. For instance, the policyholder may apply for a loan against the policy's cash value and need to pay interest on the loan principal. The policyholder can likewise utilize the money incentive to pay premiums or buy extra protection. Thecash value is a living advantage that remains with the insurance agency when the insured dies. Any extraordinary loans against the cash value will lessen the policy's death benefit.
-
-Types of Life Insurance
-Various kinds of life insurance are accessible to meet a wide range of necessities and inclinations:
-	Term Life – Term life insurance lasts for a specific number of years. You choose the term when you take out the policy. Common terms are 10, 20, or 30 years.
-	Level Term – The premiums are same every consecutive year.
-	Increasing Term – The premiums are lower when you're younger and increases as you get more established. This is likewise called "yearly renewable term."
-	Permanent – This stays in power for the insured's whole life unless the policyholder stops paying the premiums or surrenders the policy. It's commonly more costly than term.
-	Single Premium – In this situation the policyholder pays the whole premium in advance instead of paying it month to month, quarterly, or through yearly installments.
-	Whole Life – Whole life insurance is a sort of permanent life insurance that aggregates cash value.
-	Universal Life – A sort of permanent life insurance with a cash value element that earns interest, universal life insurance has premiums that are practically identical to term life insurance. In contrast to term and whole life, the premiums and death benefit can be adjusted later.
-	Guaranteed Universal – This is a kind of universal life insurance that doesn't build cash value and usually has lower premiums than whole life.
-	Variable Universal – With variable universal life insurance, the policyholder is permitted to invest the policy’s cash value.
-	Indexed Universal – This is a type of universal life insurance that lets the policyholder earn a fixed or equity-indexed rate of return on the cash value part.
-	Burial or Final Expense – This is a kind of permanent life insurance that has a lesser death benefit. Regardless of the names, beneficiaries can utilize the death benefit as they wish.
-	Guaranteed Issue – A kind of permanent life insurance accessible to individuals with medical issues that would some way or another make them uninsurable, guaranteed issue life insurance won't pay a death benefit during the initial two years the policy is in power (except if the death is unplanned) because of the high danger of insuring the individual. In any case, the insurer will restore the policy premiums in addition to interest to the beneficiaries if the insured dies during that period.
-
-
-Life coverage Riders
-
-Numerous insurance policies offer policyholders the alternative to modify their policies to oblige their requirements. Riders are how the most common way policyholders may modify their plan. There are numerous riders, but availability depends upon the provider. The policyholder will regularly pay an extra premium for each rider or a fee to exercise the rider, however a few policies include
-certain riders in their base premium.
-
-•	The accidental death benefit rider gives extra life insurance coverage in the occasion the insured’s death is coincidental.
-•	The waiver of premium rider relieves the policyholder of making premium installments if the insured gets disabled and unfit to work.
-•	The disability income rider pays a month to month income in the event the policyholder gets unfit to work for a while or longer because of a serious disease or injury.
-•	Upon diagnosis of terminal illness, the accelerated death benefit rider permits the insured to collect a part or whole of the death benefit.
-•	The long-term care rider is a kind of accelerated death benefit that can be utilized to pay for nursing home, assisted living, or in-home care when the insured requires help with exercises of day-to- day living, for example, washing, eating, and using the toilet.
-•	An guaranteed insurability rider lets the policyholder purchase extra protection in the not too distant future without a medical review.
-
-IMPORTANT* (WRITE IN BOX) “Every policy is unique to the insured and insurer. It's essential to audit your policy document to comprehend what risks your policy covers, the amount it will pay to your beneficiaries, and under what conditions. “
-
-How much Life Insurance to Buy?
-
-Before you apply for life insurance, you ought to examine your financial circumstance and decide how much cash would be required to maintain your beneficiaries’ standard of living or meet the need for which you're buying a policy.
-For instance, if you are the primary caretaker and have kids who are two and four years of age, you would need enough insurance to cover your custodial responsibilities until your children are grown up and are ready to sustain themselves. You may explore the costs to hire a babysitter and a maid, or to utilize commercial childcare and cleaning services, then maybe include some money for their education. Add up what these costs would be throughout the following 16 or so years, adding more with respect to expected inflation, and that is the death benefit you should purchase—if you can bear the cost of it.
-*TIP* (WRITE IN BOX): It's judicious to rethink your life insurance needs every year or after noteworthy life events, for example, separation, marriage, the birth or adoption of a child, or significant purchases, like, a house. You may need to update the policy’s beneficiaries, increase your coverage, or even decrease your coverage.
-
-Extra Uses for Life Insurance
-A vast majority of people use life insurance to provide cash to beneficiaries who might endure a financial hardship upon the insured’s death. In any case, for wealthy folks, the tax advantages of life insurance, including tax-deferred growth of cash value, tax-free death dividends, and tax-free death benefits, can offer additional strategic opportunities.
-
-o	Funding Retirement – Policies with a cash value or investment component can give a source of retirement income. This opportunity can accompany high fees and a lower death benefit, so it might just be a decent alternative for people who have maximized other tax-advantaged savings and investment accounts. The pension maximization strategy described before is another way life insurance can be utilized to fund retirement.
-o
-o	Maintaining a strategic distance from Taxes – The death benefit of a life insurance policy is generally tax free. Wealthy people at times purchase permanent life insurance within a trust to help pay the estate taxes that will be due upon their death. This strategy aids to preserve the estimation of the estate for their heirs. Tax avoidance is a law-abiding strategy for limiting one's tax liability and ought not be mistaken for tax evasion, which is illicit.
-o
-o	Borrowing Money – Most permanent life insurance accumulates cash value that the policyholder can borrow against. Actually, you are borrowing money from the insurance agency and utilizing your cash value as collateral.  Unlike with different sorts of loans, the policyholder's credit score isn't a factor. Reimbursement terms can be flexible, and the loan interest returns into the policyholder's cash value account. Policy loans can lessen the policy’s death benefit, in any case.
-`,
+    desc: `Life Insurance is an agreement between an insurer and a policyholder in which the insurer ensures payment of a death benefit to named beneficiaries when the insured dies.`,
     link: "/product/lifeinsurance",
     name: "lifeinsurance",
   },
   {
     title: "Home Loan",
-    desc: `
-    WHAT IS HOME LOAN?
-A home loan is an amount of money that an individual borrows from a bank or money lending agency at a specific rate of interest to be paid with the EMI monthly. The property is taken as a security by the cash loaning organization for the Home Loan.
-• The property can either be commercial or personal in nature.
-• When the borrower can't pay the dues, the moneylender will have legitimate rights to recover the outstanding loan amount by sale of the property in question.
-Types of Home Loans:
-
-• Home Purchase Loan: This is the credit that one takes for buying a home.
-• Home Improvement Loan: This loan covers expenditure identified with fixes of your home or even redesign.
-• Home Construction Loan: This credit proves to be useful when you are building another house.
-• Land Purchase Loan: Someone wishing to purchase a plot of land for constructing his/her own house can avail this loan.
-• Home Extension Loan: Suppose you intend to include another room, garage, bathroom or kitchen to your home. This is the loan that you should to apply for and this also proves to be useful in the event that you are planning to have another floor.
-• Joint Home Loan: These are loans taken by two individuals or even more. For example, spouses can apply for joint home loans.
-• Home Loan Balance Transfer: You can utilize this mechanism to switch your outstanding loan amount to an alternate moneylender with better terms and conditions and lower interest.
-• Top Up Home Loan: This type of loan encourages you borrow some more money over the outstanding loan total. There are appealing rates of interest offered by us in case of top-up loans.
-
-Home Loan - Features and Benefits
-•	Pradhan Mantri Awas Yojana (PMAY)
-Home Loans get more affordable than ever, with help from the Pradhan Mantri Awas Yojana (PMAY) for first-time homeowners. Reduce your Home Loan EMIs with PMAY, by getting a Home Loan at a financing cost of simply 6.93%*, and save up to Rs. 2.67 lakh on interest*. Get a Home Loan under PMAY regardless of whether your folks own a home, and in this manner get the opportunity to become a property holder yourself.
-
-•	Easy Balance Transfer Facility
-Renegotiate your current home loan with us, with minimal documentation and faster processing. Apply for home loan transfer, and get a top-up loan at a nominal interest rate.
-
-•	Top-up Loan
-Finance your other necessities with a high-value top-up loan well beyond your current housing loan. Get a top-up loan up to Rs. 50 lakhs with no additional documentation, at a nominal rate of interest.
-
-•	Property Dossier
-A modified report to direct you through all the legal and financial aspects of being a property owner.
-
-•	Part-prepayment and Foreclosure Facility
-No charges on part-prepayment or foreclosure to make the loan affordable.
-
-•	Flexible Tenor
-Flexible tenors extending as long as 240 months, to accommodate your repayment limit.
-
-•	Minimal Documentation
-Simple Home Loan eligibility criteria and minimal documentation, to assist you with getting your loan quicker.
-
-•	Online Account Management
-Online management of your Home Loan utilizing our computerized customer portal, for your convenience.
-
-•	Customized Insurance Schemes
-Customized insurance plans to shield your family from the burden of repaying the housing loan in case of unanticipated events.
-    `,
+    desc: `A home loan is an amount of money that an individual borrows from a bank or money lending agency at a specific rate of interest to be paid with the EMI monthly.`,
     link: "/product/homeloan",
     name: "homeloan",
   },
@@ -136,34 +19,22 @@ Customized insurance plans to shield your family from the burden of repaying the
     name: "personalloan",
   },
   {
-    title: "Micro Loans (Under ₹50k)",
-    desc: "Instant small ticket loans to meet your immediate cash needs",
-    link: "/product/microlens",
-    name: "microlens",
-  },
-  {
     title: "Business Loan",
-    desc: "Expand your business with loans at lowest interest rates",
+    desc: "Instant small ticket loans to meet your immediate cash needs",
     link: "/product/businessloan",
     name: "businessloan",
   },
   {
-    title: "Transfer Personal Loan",
+    title: "Home Loan Balance Transfer",
+    desc: "Expand your business with loans at lowest interest rates",
+    link: "/product/homeloanbalancetransfer",
+    name: "homeloanbalancetransfer",
+  },
+  {
+    title: "Term Insurance",
     desc: "Get better interest rates on your existing personal loan",
-    link: "/product/transferpersonalloan",
-    name: "transferpersonalloan",
-  },
-  {
-    title: "Home Loan",
-    desc: "Compare & choose from lowest interest rates for your dream home",
-    link: "/product/homeloan",
-    name: "homeloan",
-  },
-  {
-    title: "Transfer Home Loan",
-    desc: "Save on your home loan by transferring it to lower interest rates",
-    link: "/product/transferhomeloan",
-    name: "transferhomeloan",
+    link: "/product/terminsurance",
+    name: "terminsurance",
   },
   {
     title: "Loan Against Property",
@@ -178,46 +49,10 @@ Customized insurance plans to shield your family from the burden of repaying the
     name: "goldloan",
   },
   {
-    title: "Life Insurance",
-    desc: "Get insurance for your loved ones & secure their future",
-    link: "/product/lifeinsurance",
-    name: "lifeinsurance",
-  },
-  {
     title: "Health Insurance",
     desc: "Protect yourself & your family in a hour of need",
     link: "/product/healthinsurance",
     name: "healthinsurance",
-  },
-  {
-    title: "Savings Account",
-    desc: "Explore the best ways to make your money grow",
-    link: "/product/savingsaccount",
-    name: "savingsaccount",
-  },
-  {
-    title: "Fixed Deposits",
-    desc: "For secured returns on your investments",
-    link: "/product/fixeddeposits",
-    name: "fixeddeposits",
-  },
-  {
-    title: "Direct Mutual Funds",
-    desc: "For secured returns on your investments",
-    link: "/product/directmutualfunds",
-    name: "directmutualfunds",
-  },
-  {
-    title: "Guaranteed Return Plan",
-    desc: "Insurance to secure your family’s future",
-    link: "/product/guaranteedreturnplan",
-    name: "guaranteedreturnplan",
-  },
-  {
-    title: "Free DEMAT Account",
-    desc: "Start trading in stocks & currencies",
-    link: "/product/freedemantaccount",
-    name: "freedemantaccount",
   },
 ]
 export default products
