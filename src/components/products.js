@@ -12,6 +12,18 @@ const products = [
   //   name: "creditcards",
   // },
   {
+    title: "Life Insurance",
+    desc: `Life Insurance is an agreement between an insurer and a policyholder.`,
+    link: "/product/lifeinsurance",
+    name: "lifeinsurance",
+  },
+  {
+    title: "Home Loan",
+    desc: `A home loan is an amount of money that an individual borrows from a bank or money lending agency`,
+    link: "/product/homeloan",
+    name: "homeloan",
+  },
+  {
     title: "Personal Loan",
     desc:
       "Select the best offer curated just for you from a wide choice of lenders",
