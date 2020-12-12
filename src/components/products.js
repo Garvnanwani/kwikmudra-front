@@ -19,34 +19,22 @@ const products = [
     name: "personalloan",
   },
   {
-    title: "Micro Loans (Under ₹50k)",
-    desc: "Instant small ticket loans to meet your immediate cash needs",
-    link: "/product/microlens",
-    name: "microlens",
-  },
-  {
     title: "Business Loan",
-    desc: "Expand your business with loans at lowest interest rates",
+    desc: "Instant small ticket loans to meet your immediate cash needs",
     link: "/product/businessloan",
     name: "businessloan",
   },
   {
-    title: "Transfer Personal Loan",
+    title: "Home Loan Balance Transfer",
+    desc: "Expand your business with loans at lowest interest rates",
+    link: "/product/homeloanbalancetransfer",
+    name: "homeloanbalancetransfer",
+  },
+  {
+    title: "Term Insurance",
     desc: "Get better interest rates on your existing personal loan",
-    link: "/product/transferpersonalloan",
-    name: "transferpersonalloan",
-  },
-  {
-    title: "Home Loan",
-    desc: "Compare & choose from lowest interest rates for your dream home",
-    link: "/product/homeloan",
-    name: "homeloan",
-  },
-  {
-    title: "Transfer Home Loan",
-    desc: "Save on your home loan by transferring it to lower interest rates",
-    link: "/product/transferhomeloan",
-    name: "transferhomeloan",
+    link: "/product/terminsurance",
+    name: "terminsurance",
   },
   {
     title: "Loan Against Property",
@@ -61,46 +49,10 @@ const products = [
     name: "goldloan",
   },
   {
-    title: "Life Insurance",
-    desc: "Get insurance for your loved ones & secure their future",
-    link: "/product/lifeinsurance",
-    name: "lifeinsurance",
-  },
-  {
     title: "Health Insurance",
     desc: "Protect yourself & your family in a hour of need",
     link: "/product/healthinsurance",
     name: "healthinsurance",
-  },
-  {
-    title: "Savings Account",
-    desc: "Explore the best ways to make your money grow",
-    link: "/product/savingsaccount",
-    name: "savingsaccount",
-  },
-  {
-    title: "Fixed Deposits",
-    desc: "For secured returns on your investments",
-    link: "/product/fixeddeposits",
-    name: "fixeddeposits",
-  },
-  {
-    title: "Direct Mutual Funds",
-    desc: "For secured returns on your investments",
-    link: "/product/directmutualfunds",
-    name: "directmutualfunds",
-  },
-  {
-    title: "Guaranteed Return Plan",
-    desc: "Insurance to secure your family’s future",
-    link: "/product/guaranteedreturnplan",
-    name: "guaranteedreturnplan",
-  },
-  {
-    title: "Free DEMAT Account",
-    desc: "Start trading in stocks & currencies",
-    link: "/product/freedemantaccount",
-    name: "freedemantaccount",
   },
 ]
 export default products
