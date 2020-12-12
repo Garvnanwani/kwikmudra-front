@@ -123,7 +123,6 @@ const HomeLoan = () => {
         </Button>
       </form>
       <Typography variant="pre"></Typography>
-      <Copyright />
       <div style={{ margin: "20px 0px" }}>
         <Typography
           variant="body2"
@@ -131,6 +130,8 @@ const HomeLoan = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
+          <br />
+          <br />
           What is Home Loan <br />
           <br />
           A home loan is an amount of money that an individual borrows from a
@@ -229,6 +230,7 @@ const HomeLoan = () => {
           <br />
         </Typography>
       </div>
+      <Copyright />
     </>
   );
 };

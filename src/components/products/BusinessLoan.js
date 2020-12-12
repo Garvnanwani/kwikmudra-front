@@ -122,7 +122,6 @@ const BusinessLoan = () => {
           Submit
         </Button>
       </form>
-      <Copyright />
       <div style={{ margin: "20px 0px" }}>
         <Typography
           variant="body2"
@@ -130,6 +129,8 @@ const BusinessLoan = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
+          <br />
+          <br />
           To begin any new business, or to revamp an existing one, or for
           extension purposes, business loan is the essential money related item
           benefited by people and undertakings. Business loan is offered to meet
@@ -145,6 +146,7 @@ const BusinessLoan = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
+          <br />
           <br />
           Top Features of Business Loan: <br />
           Interest Rates: 14.99% onwards <br />
@@ -252,6 +254,7 @@ const BusinessLoan = () => {
           Proof of ownership of the possessions used for business activities
         </Typography>
       </div>
+      <Copyright />
     </>
   );
 };

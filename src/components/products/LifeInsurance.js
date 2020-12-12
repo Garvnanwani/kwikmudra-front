@@ -123,7 +123,6 @@ const LifeInsurance = () => {
         </Button>
       </form>
       <Typography variant="pre"></Typography>
-      <Copyright />
       <div style={{ margin: "20px 0px" }}>
         <Typography
           variant="body2"
@@ -131,13 +130,18 @@ const LifeInsurance = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
-          What Is Life Insurance? <br />
+          <br />
+          <br />
+          What Is Life Insurance?
+          <br />
           <br />
           Life Insurance is an agreement between an insurer and a policyholder
           in which the insurer ensures payment of a death benefit to named
           beneficiaries when the insured dies. The insurance agency guarantees a
           demise advantage in return for premiums paid by the policyholder.
           <br />
+          <br />
+
           KEY TAKEAWAYS
           <br />
           Life insurance is a legitimately binding agreement.
@@ -424,6 +428,7 @@ const LifeInsurance = () => {
           <br />
         </Typography>
       </div>
+      <Copyright />
     </>
   );
 };

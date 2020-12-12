@@ -123,7 +123,6 @@ const HealthInsurance = () => {
         </Button>
       </form>
       <Typography variant="pre"></Typography>
-      <Copyright />
       <div style={{ margin: "20px 0px" }}>
         <Typography
           variant="body2"
@@ -131,6 +130,8 @@ const HealthInsurance = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
+          <br />
+          <br />
           What are health insurance plans? <br />
           <br />
           Health insurance plans reimburse insured clients for their medical
@@ -179,6 +180,7 @@ const HealthInsurance = () => {
           use.
         </Typography>
       </div>
+      <Copyright />
     </>
   );
 };

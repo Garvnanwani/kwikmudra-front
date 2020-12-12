@@ -122,7 +122,6 @@ const GoldLoan = () => {
           Submit
         </Button>
       </form>
-      <Copyright />
       <div style={{ margin: "20px 0px" }}>
         <Typography
           variant="body2"
@@ -130,6 +129,8 @@ const GoldLoan = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
+          <br />
+          <br />
           Life is loaded with opportunities. Try not to permit the opportunities
           to pass on account of budgetary limitation. Get instant gold advance
           by bringing your gold ornaments at any of our branches or online. Your
@@ -157,6 +158,7 @@ const GoldLoan = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
+          <br />
           Highlights of Goal Loan <br />
           <br />
           Least Requirements: A certified copy of Passport, Driving License,
@@ -224,6 +226,7 @@ const GoldLoan = () => {
           <br />
         </Typography>
       </div>
+      <Copyright />
     </>
   );
 };
