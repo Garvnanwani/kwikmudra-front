@@ -102,17 +102,16 @@ export default function AboutSection() {
                   component="h4"
                   gutterBottom
                 >
-                  <img
+                  {/* <img
                     alt="start-img"
                     width="30px"
                     src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
-                  />
-                  Heading Here
+                  /> */}
+                  Who are we?
                 </Typography>
                 <Typography variant="body2" component="p">
-                  some other text here
-                  <br />
-                  {'"a benevolent smile"'}
+                  India's first and own money related marketplace with more than
+                  40Lakh satisfied clients
                 </Typography>
               </CardContent>
             </Card>
@@ -127,17 +126,17 @@ export default function AboutSection() {
                   component="h4"
                   gutterBottom
                 >
-                  <img
+                  {/* <img
                     alt="start-img"
                     width="30px"
                     src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
-                  />
-                  Heading Here
+                  /> */}
+                  What we do?
                 </Typography>
                 <Typography variant="body2" component="p">
-                  some other text here
-                  <br />
-                  {'"a benevolent smile"'}
+                  We empower you to look out for the best accessible options on
+                  Loans and Credit Cards for your profile with only a couple of
+                  clicks.
                 </Typography>
               </CardContent>
             </Card>
@@ -152,17 +151,17 @@ export default function AboutSection() {
                   component="h4"
                   gutterBottom
                 >
-                  <img
+                  {/* <img
                     alt="start-img"
                     width="30px"
                     src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
-                  />
-                  Heading Here
+                  /> */}
+                  Our Vision
                 </Typography>
                 <Typography variant="body2" component="p">
-                  some other text here
-                  <br />
-                  {'"a benevolent smile"'}
+                  To instruct, encourage and enable customers with the greatest
+                  decision of the best and the most moderate financial items in
+                  India.
                 </Typography>
               </CardContent>
             </Card>
@@ -177,17 +176,15 @@ export default function AboutSection() {
                   component="h4"
                   gutterBottom
                 >
-                  <img
+                  {/* <img
                     alt="start-img"
                     width="30px"
                     src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
-                  />
-                  Heading Here
+                  /> */}
+                  Our Most Popular Products
                 </Typography>
                 <Typography variant="body2" component="p">
-                  some other text here
-                  <br />
-                  {'"a benevolent smile"'}
+                  Personal loans, Credit Cards, Home Loans etc.
                 </Typography>
               </CardContent>
             </Card>
