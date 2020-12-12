@@ -1,9 +1,6 @@
 import Button from "@material-ui/core/Button"
-import Checkbox from "@material-ui/core/Checkbox"
 import CssBaseline from "@material-ui/core/CssBaseline"
-import FormControlLabel from "@material-ui/core/FormControlLabel"
 import Grid from "@material-ui/core/Grid"
-import Link from "@material-ui/core/Link"
 import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles"
 import TextField from "@material-ui/core/TextField"
@@ -11,20 +8,7 @@ import Typography from "@material-ui/core/Typography"
 import React from "react"
 import { useParams } from "react-router-dom"
 import products from "../components/products"
-import useInput from "../hooks/useInput"
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="/">
-        Kwik Mudra
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  )
-}
+import LifeInsurance from "../components/products/LifeInsurance"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,12 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     backgroundImage: "url(https://source.unsplash.com/random)",
-    // backgroundColor: theme.palette.primary.main,
     backgroundRepeat: "no-repeat",
-    // backgroundColor:
-    //   theme.palette.type === "light"
-    //     ? theme.palette.grey[50]
-    //     : theme.palette.grey[900],
     backgroundSize: "cover",
     backgroundPosition: "center",
   },
@@ -63,71 +42,6 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
 }))
-
-const LifeInsurance = ({ product }) => {
-  const classes = useStyles()
-  return (
-    <>
-      <form className={classes.form} noValidate>
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          name="Full Name"
-          label="Full Name"
-          type="text"
-          id="full-name"
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="email"
-          label="Email Address"
-          name="email"
-          autoComplete="email"
-          autoFocus
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          name="Phone Number"
-          label="Phone Number"
-          type="number"
-          id="phone-number"
-        />
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          name="PAN"
-          label="PAN"
-          type="number"
-          id="pan"
-        />
-        <FormControlLabel
-          control={<Checkbox value="allowExtraEmails" color="primary" />}
-          label="I want to receive inspiration, marketing promotions and updates via email."
-        />
-        <Button
-          type="submit"
-          fullWidth
-          variant="contained"
-          color="primary"
-          className={classes.submit}
-        >
-          Submit
-        </Button>
-      </form>
-      <Typography variant="pre">{product.desc}</Typography>
-    </>
-  )
-}
 
 const CreditCards = () => {
   const classes = useStyles()
@@ -163,18 +77,6 @@ export default function SignInSide() {
     (product) => product.name === productName
   )
   const product = product_array[0]
-  const fullName = useInput("")
-  const dob = useInput("")
-  const pan = useInput("")
-  const pinCode = useInput("")
-  const mobileNumber = useInput("")
-  const email = useInput("")
-
-  const [age, setAge] = React.useState("")
-
-  const handleChange = (event) => {
-    setAge(event.target.value)
-  }
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -187,7 +89,7 @@ export default function SignInSide() {
           </Typography>
           {product.name === "freecreditscore" ? (
             <div>
-              <LifeInsurance product={product} />
+              <LifeInsurance />
             </div>
           ) : (
             ""
@@ -199,127 +101,6 @@ export default function SignInSide() {
           ) : (
             ""
           )}
-          {/* <form className={classes.form} noValidate>
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="Desired Loan Amount"
-              label="Desired Loan Amount"
-              type="number"
-              id="loan-amount"
-            />
-
-            <FormControl
-              variant="outlined"
-              margin="normal"
-              fullWidth
-              className={classes.formControl}
-            >
-              <InputLabel id="employment-type">Employment Type</InputLabel>
-              <Select
-                labelId="employment-type"
-                id="employment-type"
-                value={age}
-                onChange={handleChange}
-                label="Employment Type"
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Salaried</MenuItem>
-                <MenuItem value={20}>Self Employed - Business Owner</MenuItem>
-                <MenuItem value={30}>Self Employed - Professional</MenuItem>
-              </Select>
-            </FormControl>
-
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="Net Monthly Income"
-              label="Net Monthly Income"
-              type="number"
-              id="monthly-income"
-            />
-
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="Phone Number"
-              label="Phone Number"
-              type="number"
-              id="phone-number"
-            />
-
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="City of Residence"
-              label="City of Residence"
-              type="text"
-              id="curr-city"
-            />
-            <FormControl
-              variant="outlined"
-              margin="normal"
-              fullWidth
-              className={classes.formControl}
-            >
-              <InputLabel id="employment-type">Salary Received In</InputLabel>
-              <Select
-                labelId="salary-received"
-                id="salary-received"
-                value={age}
-                onChange={handleChange}
-                label="Salary Reveived In"
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Salaried</MenuItem>
-                <MenuItem value={20}>Self Employed - Business Owner</MenuItem>
-                <MenuItem value={30}>Self Employed - Professional</MenuItem>
-              </Select>
-            </FormControl>
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="Full Name"
-              label="Full Name"
-              type="text"
-              id="full-name"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Submit
-            </Button>
-          </form> */}
         </div>
       </Grid>
     </Grid>
