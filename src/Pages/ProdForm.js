@@ -1,14 +1,20 @@
-import Button from "@material-ui/core/Button"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Grid from "@material-ui/core/Grid"
 import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles"
-import TextField from "@material-ui/core/TextField"
 import Typography from "@material-ui/core/Typography"
 import React from "react"
 import { useParams } from "react-router-dom"
 import products from "../components/products"
+import BusinessLoan from "../components/products/BusinessLoan"
+import GoldLoan from "../components/products/GoldLoan"
+import HealthInsurance from "../components/products/HealthInsurance"
+import HomeLoan from "../components/products/HomeLoan"
+import HomeLoanBalanceTransfer from "../components/products/HomeLoanBalanceTransfer"
 import LifeInsurance from "../components/products/LifeInsurance"
+import LoanAgainstProperty from "../components/products/LoanAgainstProperty"
+import PersonalLoan from "../components/products/PersonalLoan"
+import TermInsurance from "../components/products/TermInsurance"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,33 +49,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const CreditCards = () => {
-  const classes = useStyles()
-  return (
-    <form className={classes.form} noValidate>
-      <TextField
-        variant="outlined"
-        margin="normal"
-        required
-        fullWidth
-        name="Phone Number"
-        label="Phone Number"
-        type="number"
-        id="phone-number"
-      />
-      <Button
-        type="submit"
-        fullWidth
-        variant="contained"
-        color="primary"
-        className={classes.submit}
-      >
-        Submit
-      </Button>
-    </form>
-  )
-}
-
 export default function SignInSide() {
   const { productName } = useParams()
   const classes = useStyles()
@@ -94,9 +73,59 @@ export default function SignInSide() {
           ) : (
             ""
           )}
-          {product.name === "creditcards" ? (
+
+          {product.name === "homeloan" ? (
             <div>
-              <CreditCards />
+              <HomeLoan />
+            </div>
+          ) : (
+            ""
+          )}
+          {product.name === "personalloan" ? (
+            <div>
+              <PersonalLoan />
+            </div>
+          ) : (
+            ""
+          )}
+          {product.name === "businessloan" ? (
+            <div>
+              <BusinessLoan />
+            </div>
+          ) : (
+            ""
+          )}
+          {product.name === "homeloanbalancetransfer" ? (
+            <div>
+              <HomeLoanBalanceTransfer />
+            </div>
+          ) : (
+            ""
+          )}
+          {product.name === "terminsurance" ? (
+            <div>
+              <TermInsurance />
+            </div>
+          ) : (
+            ""
+          )}
+          {product.name === "loanagainstproperty" ? (
+            <div>
+              <LoanAgainstProperty />
+            </div>
+          ) : (
+            ""
+          )}
+          {product.name === "goldloan" ? (
+            <div>
+              <GoldLoan />
+            </div>
+          ) : (
+            ""
+          )}
+          {product.name === "healthinsurance" ? (
+            <div>
+              <HealthInsurance />
             </div>
           ) : (
             ""
