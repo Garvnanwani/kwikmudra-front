@@ -1,9 +1,10 @@
-import { Grid } from "@material-ui/core"
-import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
-import React from "react"
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import React from "react";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   textSection: {
     paddingLeft: "30px",
-    textAlign: "left",
+    // textAlign: "left",
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
     },
@@ -56,11 +57,55 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     color: theme.palette.primary.main,
+    fontWeight: theme.typography.fontWeightBold,
   },
-}))
+  left: {
+    textAlign: "left",
+    padding: "30px 0px",
+    margin: "10px 0px",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+  right: {
+    textAlign: "right",
+    // float: "right",
+    padding: "30px 0px",
+    margin: "10px 0px",
+    // paddingTop: "20px",
+    // paddingBottom: "20px",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+  myImage: {
+    borderRadius: "15px",
+    backgroundColor: "#fafafa",
+    boxShadow: "4px 4px 10px 4px rgba(0,0,0,0.25)",
+    height: "300px",
+    [theme.breakpoints.down("sm")]: {
+      height: "200px",
+    },
+  },
+  myContainer: {
+    margin: "30px 0px",
+  },
+  imageContainer: {
+    display: "flex",
+    flexDirection: "row",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      alignItems: "space-around",
+      justifyContent: "center",
+    },
+    alignItems: "center",
+    justifyContent: "space-around",
+    margin: "20px 0px",
+  },
+}));
 
 export default function AboutPage() {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <div>
       <Navbar />
@@ -69,10 +114,10 @@ export default function AboutPage() {
           container
           justify="center"
           alignItems="center"
-          spacing={5}
-          style={{ paddingBottom: "40px", textAlign: "-webkit-center" }}
+          // spacing={5}
+          style={{ paddingBottom: "40px" }}
         >
-          <Grid item xs={12}>
+          <Grid item xs={12} className={classes.myContainer}>
             <div className={classes.textSection}>
               <Typography
                 variant="h3"
@@ -90,7 +135,20 @@ export default function AboutPage() {
             </div>
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={12} className={classes.imageContainer}>
+            <img
+              src="http://lorempixel.com/640/480/business"
+              alt="imagee"
+              className={classes.myImage}
+            />
+            <img
+              src="http://lorempixel.com/640/480/business"
+              alt="imagee"
+              className={classes.myImage}
+            />
+          </Grid>
+
+          <Grid item xs={12} className={classes.left}>
             <div className={classes.textSection}>
               <Typography
                 variant="h3"
@@ -113,8 +171,8 @@ export default function AboutPage() {
             </div>
           </Grid>
 
-          <Grid item xs={12}>
-            <div className={classes.textSection}>
+          <Grid item xs={12} className={classes.myContainer}>
+            <div className={clsx(classes.textSection, classes.left)}>
               <Typography
                 variant="h3"
                 component="h3"
@@ -188,10 +246,9 @@ export default function AboutPage() {
             </div>
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={12} className={classes.myContainer}>
             <Typography variant="h3" className={classes.heading}>
-              {" "}
-              Our Most Popular Products{" "}
+              Our Most Popular Products
             </Typography>
             <Grid
               container
@@ -200,44 +257,45 @@ export default function AboutPage() {
               alignItems="center"
               className={classes.productsGrid}
             >
-              <Grid item xs={12} sm={6}>
-                <Typography variant="h4"> Personal Loans </Typography>
+              <Grid item xs={12} sm={6} className={classes.myContainer}>
+                <Typography variant="h5"> Personal Loans </Typography>
                 <Typography variant="body1">
                   For a wedding, home improvement, travel, crisis, salaried as
-                  well as independently employed people. (The rundown is
+                  well as independently employed people.
+                  {/* (The rundown is
                   demonstrative. Personal advances are generally useful credits;
-                  you can obtain for every legitimate explanation.)
+                  you can obtain for every legitimate explanation.) */}
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Typography variant="h4"> Home Loans </Typography>
+                <Typography variant="h5"> Home Loans </Typography>
                 <Typography variant="body1">
                   For purchase and/or constructing additional private plot or
                   property including the flat/apartment.
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Typography variant="h4"> Loan Against Property </Typography>
+                <Typography variant="h5"> Loan Against Property </Typography>
                 <Typography variant="body1">
                   For subsidizing business, kid's education or other individual
                   reasons.
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Typography variant="h4">Business Loans </Typography>
+                <Typography variant="h5">Business Loans </Typography>
                 <Typography variant="body1">
                   For startup, business expansion, injecting working capital or
                   stock, gear financing.
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Typography variant="h4">Credit Cards</Typography>
+                <Typography variant="h5">Credit Cards</Typography>
                 <Typography variant="body1">
                   For rewards, Shopping, Travel, Corporate and so forth
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Typography variant="h4">Insurance</Typography>
+                <Typography variant="h5">Insurance</Typography>
                 <Typography variant="body1">
                   For Health Cover and Life Cover
                 </Typography>
@@ -245,23 +303,16 @@ export default function AboutPage() {
             </Grid>
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={12} className={classes.myContainer}>
             <Grid
               container
               direction="row"
               justify="center"
               alignItems="center"
-              style={{
-                background: "#DF6B57",
-              }}
+              // className={classes.myContainer}
             >
-              <Grid item xs={12} sm={6}>
-                <Typography
-                  variant="body1"
-                  style={{
-                    marginRight: "1.5rem",
-                  }}
-                >
+              <Grid item xs={12} sm={6} className={classes.left}>
+                <Typography variant="body1">
                   Pick MakeMyBachat to settle on an informed credit choice. We
                   are passionate about improving the borrowing excursion of
                   customers in India. Consolidating important input of our 40
@@ -275,18 +326,17 @@ export default function AboutPage() {
                 <img
                   src="http://lorempixel.com/640/480/business"
                   alt="bsuiness-img"
-                  style={{
-                    marginRight: "2.5rem",
-                    border: "2px solid black",
-                    width: "100%",
-                    height: "auto",
-                  }}
+                  className={classes.myImage}
                 />
               </Grid>
             </Grid>
           </Grid>
 
-          <Grid item xs={12} style={{ textAlign: "left" }}>
+          <Grid
+            item
+            xs={12}
+            className={clsx(classes.left, classes.myContainer)}
+          >
             <Typography variant="body1">
               Contact MakeMyBachat if you look for any or all of the
               accompanying advantages:
@@ -416,5 +466,5 @@ export default function AboutPage() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
