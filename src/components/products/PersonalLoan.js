@@ -1,12 +1,12 @@
-import Button from "@material-ui/core/Button"
-import Checkbox from "@material-ui/core/Checkbox"
-import FormControlLabel from "@material-ui/core/FormControlLabel"
-import Link from "@material-ui/core/Link"
-import { makeStyles } from "@material-ui/core/styles"
-import TextField from "@material-ui/core/TextField"
-import Typography from "@material-ui/core/Typography"
-import React from "react"
-import useInput from "../../hooks/useInput"
+import Button from "@material-ui/core/Button";
+import Checkbox from "@material-ui/core/Checkbox";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Link from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
+import React from "react";
+import useInput from "../../hooks/useInput";
 
 const Copyright = () => {
   return (
@@ -18,8 +18,8 @@ const Copyright = () => {
       {new Date().getFullYear()}
       {"."}
     </Typography>
-  )
-}
+  );
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,18 +52,18 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}))
+}));
 
 const PersonalLoan = () => {
-  const fullName = useInput("")
-  const dob = useInput("")
-  const pan = useInput("")
-  const pinCode = useInput("")
-  const mobileNumber = useInput("")
-  const email = useInput("")
+  const fullName = useInput("");
+  const dob = useInput("");
+  const pan = useInput("");
+  const pinCode = useInput("");
+  const mobileNumber = useInput("");
+  const email = useInput("");
 
-  const [age, setAge] = React.useState("")
-  const classes = useStyles()
+  const [age, setAge] = React.useState("");
+  const classes = useStyles();
   return (
     <>
       <form className={classes.form} noValidate>
@@ -85,7 +85,6 @@ const PersonalLoan = () => {
           id="email"
           label="Email Address"
           name="email"
-          autoComplete="email"
           autoFocus
         />
         <TextField
@@ -124,106 +123,147 @@ const PersonalLoan = () => {
       </form>
       <div style={{ margin: "20px 0px" }}>
         <Typography
-            variant="body2"
-            color="textSecondary"
-            align="center"
-            style={{ textAlign: "left" }}
+          variant="body2"
+          color="textSecondary"
+          align="center"
+          style={{ textAlign: "left" }}
         >
           <br />
           <br />
           About Personal Loan
           <br />
           <br />
-          Personal Loan is a short to medium term advance, which doesn't require any collateral /security for disbursal. They are for the most part dispensed in a couple of hours to a couple of days with negligible or no lengthy  paper work by any means. A key component of Personal Loan is its adaptable end-use. Along these lines, this loan can be utilized to meet an lot of requirements going from crisis clinical costs to arranged uses, for example, home redesign, wedding, and so on.
+          Personal Loan is a short to medium term advance, which doesn't require
+          any collateral /security for disbursal. They are for the most part
+          dispensed in a couple of hours to a couple of days with negligible or
+          no lengthy paper work by any means. A key component of Personal Loan
+          is its adaptable end-use. Along these lines, this loan can be utilized
+          to meet an lot of requirements going from crisis clinical costs to
+          arranged uses, for example, home redesign, wedding, and so on.
           <br />
           Personal Loan Eligibility Factors
-
           <br />
-          Most banks and NBFCs (Non-Banking Financial Companies) offer individual credits to both salaried and self employed people. The qualification norms for an individual advance shift marginally relying upon the sort of candidate. Following are a portion of the key individual loan qualification factors that should be kept in mind*:
+          Most banks and NBFCs (Non-Banking Financial Companies) offer
+          individual credits to both salaried and self employed people. The
+          qualification norms for an individual advance shift marginally relying
+          upon the sort of candidate. Following are a portion of the key
+          individual loan qualification factors that should be kept in mind*:
           <br />
-          Particulars	Salaried	Self-Employed
+          Particulars Salaried Self-Employed
           <br />
-          Age	21 - 60 years	21 - 68 years
+          Age 21 - 60 years 21 - 68 years
           <br />
-          Minimum Income	Rs. 15,000 per month	Rs. 5 lakh per year (gross)
+          Minimum Income Rs. 15,000 per month Rs. 5 lakh per year (gross)
           <br />
-          Employment stability	Total experience- Minimum 2 years
+          Employment stability Total experience- Minimum 2 years
           <br />
-          Experience in the current organization- Minimum 1 year	Minimum 2 years in current business
-
+          Experience in the current organization- Minimum 1 year Minimum 2 years
+          in current business
           <br />
           How Personal Loan Works
           <br />
-          Personal Loan are unsecured loan with adaptable end-use that ordinarily have a tenure of a year to 60 months. In the event that a shorter period is picked, individual EMI sums are higher, while a more extended period brings about lower individual EMIs. Coming up next are the key highlights of an individual advance:
-
+          Personal Loan are unsecured loan with adaptable end-use that
+          ordinarily have a tenure of a year to 60 months. In the event that a
+          shorter period is picked, individual EMI sums are higher, while a more
+          extended period brings about lower individual EMIs. Coming up next are
+          the key highlights of an individual advance:
           <br />
           Personal Loan Features
-              <br />
-              No Collateral/Security Required: You don’t need to provide any collateral such as house or car to avail a personal loan. The loan is approved only on the basis of your creditworthiness, which depends on your credit score, income, repayment history, employer reputation, etc.
-              <br />
-              Flexible End Use: Unlike a car loan or home loan, personal loans can be used for multiple purposes, such as to meet expenses of a medical emergency, travel, house renovation, debt consolidation, etc.
-              <br />
-              Flexible Tenure: Personal Loans come with flexible tenure usually ranging from 12 months to 60 months.
-              <br />
-              Minimal Documentation: You can apply for a personal loan online and even offline with minimal documentation. Key documents that lenders generally need the applicant to provide include a proof of identity, a proof of address and a proof of income.
-              <br />
-              Quick Disbursal: Personal loan disbursal can happen within a period as short as a few hours, once the application is approved. Turnaround times can also be as short as a few minutes, if you are able to avail a pre-approved loan offer.
-              <br />
-              Flexible Loan Amount: The eligible personal loan amount is based on an individual’s repayment history, monthly income, age, profession, employer reputation and other such factors. Lenders offer personal loans of amount as low as Rs. 10,000 to as high as Rs. 40 lakh.
-
-
+          <br />
+          No Collateral/Security Required: You don’t need to provide any
+          collateral such as house or car to avail a personal loan. The loan is
+          approved only on the basis of your creditworthiness, which depends on
+          your credit score, income, repayment history, employer reputation,
+          etc.
+          <br />
+          Flexible End Use: Unlike a car loan or home loan, personal loans can
+          be used for multiple purposes, such as to meet expenses of a medical
+          emergency, travel, house renovation, debt consolidation, etc.
+          <br />
+          Flexible Tenure: Personal Loans come with flexible tenure usually
+          ranging from 12 months to 60 months.
+          <br />
+          Minimal Documentation: You can apply for a personal loan online and
+          even offline with minimal documentation. Key documents that lenders
+          generally need the applicant to provide include a proof of identity, a
+          proof of address and a proof of income.
+          <br />
+          Quick Disbursal: Personal loan disbursal can happen within a period as
+          short as a few hours, once the application is approved. Turnaround
+          times can also be as short as a few minutes, if you are able to avail
+          a pre-approved loan offer.
+          <br />
+          Flexible Loan Amount: The eligible personal loan amount is based on an
+          individual’s repayment history, monthly income, age, profession,
+          employer reputation and other such factors. Lenders offer personal
+          loans of amount as low as Rs. 10,000 to as high as Rs. 40 lakh.
           <br />
           Interest Rates
           <br />
-          Personal loan interest rates differ from one lending bank to another. NBFC’s have a slightly higher rate but quicker disbursal chances.,
+          Personal loan interest rates differ from one lending bank to another.
+          NBFC’s have a slightly higher rate but quicker disbursal chances.,
           <br />
           Documents Required
           <br />
-          Identity Proof	PAN Card/ Voter’s ID/ Aadhaar Card/ Passport/ Driving License
-              <br />
-              Address Proof	Bank Account Statement/ Aadhaar Card/ Lease/ Property purchase Agreement/ Utility Bill (not more than 3 months old)/ Passport/ Driving License
-              <br />
-              Income Proof	For Salaried Individuals: Salary Slip/ Bank Account Statement/ Form 16
+          Identity Proof PAN Card/ Voter’s ID/ Aadhaar Card/ Passport/ Driving
+          License
           <br />
-          For Self Employed: Previous Year ITR/ P&L Statement and Balance Sheet/ Bank Account Statement
-              <br />
-              Business Proof	Certificate of Practice/ Partnership Deed/ GST Registration and Filing Documents/ MOA & AOA/ Shop Act License
-
+          Address Proof Bank Account Statement/ Aadhaar Card/ Lease/ Property
+          purchase Agreement/ Utility Bill (not more than 3 months old)/
+          Passport/ Driving License
+          <br />
+          Income Proof For Salaried Individuals: Salary Slip/ Bank Account
+          Statement/ Form 16
+          <br />
+          For Self Employed: Previous Year ITR/ P&L Statement and Balance Sheet/
+          Bank Account Statement
+          <br />
+          Business Proof Certificate of Practice/ Partnership Deed/ GST
+          Registration and Filing Documents/ MOA & AOA/ Shop Act License
           <br />
           ** Just a sample list. Actual list will vary
           <br />
           Documents Required :
           <br />
-          The confirmation procedure for an individual credit includes the accompanying key steps:
-
+          The confirmation procedure for an individual credit includes the
+          accompanying key steps:
           <br />
-          steps 1: Once you have presented your online application on our webpage or App, your selected bank gets your online credit application.
+          steps 1: Once you have presented your online application on our
+          webpage or App, your selected bank gets your online credit
+          application.
           <br />
-          Step 2: Subsequently, the moneylender's delegate will call you to check application subtleties and schedule pickup of records required for your advance application.
+          Step 2: Subsequently, the moneylender's delegate will call you to
+          check application subtleties and schedule pickup of records required
+          for your advance application.
           <br />
-          Step 3: Once the reports have been gathered and effectively checked , the individual advance application is approved.
+          Step 3: Once the reports have been gathered and effectively checked ,
+          the individual advance application is approved.
           <br />
-          Step 5: Loan is dispensed once the candidate consents to the advance arrangement
+          Step 5: Loan is dispensed once the candidate consents to the advance
+          arrangement
           <br />
           and signs the necessary paperwork
-
           <br />
           The primary variables influencing the loan disbursal
-
           <br />
-          Salary of the candidate – higher pay level will in general increase the disbursal amount
+          Salary of the candidate – higher pay level will in general increase
+          the disbursal amount
           <br />
-          Current EMI payable – higher EMI payouts normally decline the disbursal amount
+          Current EMI payable – higher EMI payouts normally decline the
+          disbursal amount
           <br />
-          Number of dependents – higher number of dependents for the most part reduce  the disbursal amount
+          Number of dependents – higher number of dependents for the most part
+          reduce the disbursal amount
           <br />
-          The list of components affecting disbursal limits  of loan  referenced above isn't comprehensive and there might be others that affect the disbursal choice made by moneylenders..
+          The list of components affecting disbursal limits of loan referenced
+          above isn't comprehensive and there might be others that affect the
+          disbursal choice made by moneylenders..
           <br />
-        </Typography >
+        </Typography>
       </div>
       <Copyright />
     </>
-  )
-}
+  );
+};
 
-export default PersonalLoan
+export default PersonalLoan;

@@ -85,7 +85,6 @@ const LifeInsurance = () => {
           id="email"
           label="Email Address"
           name="email"
-          autoComplete="email"
           autoFocus
         />
         <TextField
@@ -141,7 +140,6 @@ const LifeInsurance = () => {
           demise advantage in return for premiums paid by the policyholder.
           <br />
           <br />
-
           KEY TAKEAWAYS
           <br />
           Life insurance is a legitimately binding agreement.
