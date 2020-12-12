@@ -66,7 +66,7 @@ export default function SignInSide() {
           <Typography component="h1" variant="h5" gutterBottom>
             {product.title}
           </Typography>
-          {product.name === "freecreditscore" ? (
+          {product.name === "lifeinsurance" ? (
             <div>
               <LifeInsurance />
             </div>

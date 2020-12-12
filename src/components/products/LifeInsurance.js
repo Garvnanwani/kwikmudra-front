@@ -122,7 +122,9 @@ const LifeInsurance = () => {
           Submit
         </Button>
       </form>
-      <Typography variant="pre"></Typography>
+      <Typography variant="pre">
+
+      </Typography>
       <Copyright />
     </>
   )
