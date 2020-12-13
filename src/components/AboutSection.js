@@ -65,6 +65,10 @@ const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
     },
   },
+  textContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
 }));
 
 export default function AboutSection() {
@@ -94,12 +98,12 @@ export default function AboutSection() {
         >
           <Grid item xs={12} sm={6} md={6} className={classes.item}>
             <Card variant="outlined" className={classes.cardRoot}>
-              <CardContent style={{ textAlign: "center" }}>
+              <CardContent>
                 <Typography
                   className={classes.cardTitle}
                   color="textSecondary"
-                  variant="h4"
-                  component="h4"
+                  variant="h5"
+                  component="h5"
                   gutterBottom
                 >
                   {/* <img
@@ -110,8 +114,10 @@ export default function AboutSection() {
                   Who are we?
                 </Typography>
                 <Typography variant="body2" component="p">
-                  India's first and own money related marketplace with more than
-                  40Lakh satisfied clients
+                  <div className={classes.textContainer}>
+                    India's first and own money related marketplace with more
+                    than 40Lakh satisfied clients
+                  </div>
                 </Typography>
               </CardContent>
             </Card>
@@ -122,8 +128,8 @@ export default function AboutSection() {
                 <Typography
                   className={classes.cardTitle}
                   color="textSecondary"
-                  variant="h4"
-                  component="h4"
+                  variant="h5"
+                  component="h5"
                   gutterBottom
                 >
                   {/* <img
@@ -134,9 +140,11 @@ export default function AboutSection() {
                   What we do?
                 </Typography>
                 <Typography variant="body2" component="p">
-                  We empower you to look out for the best accessible options on
-                  Loans and Credit Cards for your profile with only a couple of
-                  clicks.
+                  <div className={classes.textContainer}>
+                    We empower you to look out for the best accessible options
+                    on Loans and Credit Cards for your profile with only a
+                    couple of clicks.
+                  </div>
                 </Typography>
               </CardContent>
             </Card>
@@ -147,8 +155,8 @@ export default function AboutSection() {
                 <Typography
                   className={classes.cardTitle}
                   color="textSecondary"
-                  variant="h4"
-                  component="h4"
+                  variant="h5"
+                  component="h5"
                   gutterBottom
                 >
                   {/* <img
@@ -158,10 +166,11 @@ export default function AboutSection() {
                   /> */}
                   Our Vision
                 </Typography>
-                <Typography variant="body2" component="p">
-                  To instruct, encourage and enable customers with the greatest
-                  decision of the best and the most moderate financial items in
-                  India.
+                <Typography variant="body1" component="p">
+                  <div className={classes.textContainer}>
+                    To instruct, encourage and enable customers with the
+                    greatest decision of the best financial items in India.
+                  </div>
                 </Typography>
               </CardContent>
             </Card>
@@ -172,8 +181,8 @@ export default function AboutSection() {
                 <Typography
                   className={classes.cardTitle}
                   color="textSecondary"
-                  variant="h4"
-                  component="h4"
+                  variant="h5"
+                  component="h5"
                   gutterBottom
                 >
                   {/* <img
@@ -181,10 +190,12 @@ export default function AboutSection() {
                     width="30px"
                     src="https://www.vectorlogo.zone/logos/telepresenceio/telepresenceio-icon.svg"
                   /> */}
-                  Our Most Popular Products
+                  Our Popular Products
                 </Typography>
                 <Typography variant="body2" component="p">
-                  Personal loans, Credit Cards, Home Loans etc.
+                  <div className={classes.textContainer}>
+                    Personal loans, Credit Cards, Home Loans etc. <br />
+                  </div>
                 </Typography>
               </CardContent>
             </Card>
