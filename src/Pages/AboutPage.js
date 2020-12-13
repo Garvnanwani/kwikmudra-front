@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, ListItemIcon, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
@@ -6,7 +6,11 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import clsx from "clsx";
 import Fade from "react-reveal/Fade";
-
+import Image1 from "../assets/b-image1.jpg";
+import Image2 from "../assets/b-image2.jpg";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 // import Card from "@material-ui/core/Card";
 // import CardContent from "@material-ui/core/CardContent";
 const useStyles = makeStyles((theme) => ({
@@ -36,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     color: "#fff",
     borderRadius: "15px",
-    boxShadow: "3px 3px 5px 5px rgba(0,0,0,0.25)",
+    boxShadow: "0px 5px 15px 5px rgba(0,0,0,0.25)",
     // margin: "5px",
   },
   imgSection: {
@@ -182,16 +186,8 @@ export default function AboutPage() {
           </Fade>
 
           <Grid item xs={12} className={classes.imageContainer}>
-            <img
-              src="http://lorempixel.com/640/480/business"
-              alt="imagee"
-              className={classes.myImage}
-            />
-            <img
-              src="http://lorempixel.com/640/480/business"
-              alt="imagee"
-              className={classes.myImage}
-            />
+            <img src={Image1} alt="imagee" className={classes.myImage} />
+            <img src={Image2} alt="imagee" className={classes.myImage} />
           </Grid>
 
           <Grid item xs={12} className={clsx(classes.myContainer)}>
@@ -240,44 +236,84 @@ export default function AboutPage() {
                   look out for the best accessible options on Loans and Credit
                   Cards for your profile with only a couple of clicks.
                 </Typography>
-                <Typography variant="body2">
-                  <ul>
-                    <li>
-                      We offer free customized help for Loans, Credit Cards and
-                      Insurance items on the web.{" "}
-                    </li>
-                    <li>
-                      We generally endeavor to resound with our customer needs.
-                      In this way, every time we gather the best-coordinated
-                      products under each query.
-                    </li>
-                    <li>
-                      We team up with renowned and dependable banks and
-                      financial establishments to reliably guarantee a
-                      hassle-free customer experience.
-                    </li>
-                    <li>
-                      With our online presence, social media platforms and
-                      Financial Tools, we enable our clients by disentangling
-                      and de-jargonizing budgetary terms and calculations. You
-                      can likewise do a simple comparison of financial
-                      institutions foundations and items on our site.
-                    </li>
-                    <li>
-                      Our Relationship Managers are very much prepared to
-                      guarantee the best client experience by guiding clients
-                      about the product includes, documentation, endorsement,
-                      and payment measure.
-                    </li>
-                    <li>
-                      Our frameworks work 24X7 to guarantee quickest endorsement
-                      and disbursal of the applications.
-                    </li>
-                    <li>
-                      We guarantee doorstep services, including document pickup
-                      and card delivery.
-                    </li>
-                  </ul>
+                <Typography
+                  variant="body2"
+                  className={classes.left}
+                  style={{ marginTop: "0px" }}
+                >
+                  <List dense>
+                    <ListItem>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText>
+                        We offer free customized help for Loans, Credit Cards
+                        and Insurance items on the web.
+                      </ListItemText>
+                    </ListItem>
+
+                    <ListItem>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText>
+                        We generally endeavor to resound with our customer
+                        needs. In this way, every time we gather the
+                        best-coordinated products under each query.
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText>
+                        We team up with renowned and dependable banks and
+                        financial establishments to reliably guarantee a
+                        hassle-free customer experience.
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText>
+                        With our online presence, social media platforms and
+                        Financial Tools, we enable our clients by disentangling
+                        and de-jargonizing budgetary terms and calculations. You
+                        can likewise do a simple comparison of financial
+                        institutions foundations and items on our site.
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText>
+                        Our Relationship Managers are very much prepared to
+                        guarantee the best client experience by guiding clients
+                        about the product includes, documentation, endorsement,
+                        and payment measure.
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText>
+                        Our frameworks work 24X7 to guarantee quickest
+                        endorsement and disbursal of the applications.
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText>
+                        We guarantee doorstep services, including document
+                        pickup and card delivery.
+                      </ListItemText>
+                    </ListItem>
+                  </List>
                 </Typography>
                 <Typography variant="body1" style={{ fontWeight: "500" }}>
                   We assist you with sealing the deal rapidly and mindfully,
@@ -464,7 +500,7 @@ export default function AboutPage() {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <img
-                    src="http://lorempixel.com/640/480/business"
+                    src={Image1}
                     alt="bsuiness-img"
                     className={classes.myImage}
                   />
@@ -483,38 +519,87 @@ export default function AboutPage() {
               accompanying advantages:
             </Typography>
             <Typography variant="body1">
-              <ul>
-                <li>
-                  Extensive options of Loans and Credit Cards accessible in the
-                  nation.
-                </li>
-                <li>
-                  Consistent customer support regardless of the ticket-size.{" "}
-                </li>
-                <li>Exact match bargains as per your profile. </li>
-                <li>Real-time loan quote comparison conceivable. </li>
-                <li>
-                  Delicate credit checks to guarantee no effect on your score.{" "}
-                </li>
-                <li>
-                  Free monetary guidance on the most proficient method to pick
-                  reliable and solid deals on secured about and unsecured
-                  advances, insurance covers and credit cards.{" "}
-                </li>
-                <li>
-                  Individual attention for each query irrespective of client
-                  income/business capital, location and credit record.{" "}
-                </li>
-                <li>
-                  Transparent approach. No concealed charges or phony
-                  guarantees.{" "}
-                </li>
-                <li>
-                  100% data security. We don't share customer subtleties with
-                  any outsider for the reasons other than client driven product
-                  inquiries.
-                </li>
-              </ul>
+              <List dense component="p">
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    Extensive options of Loans and Credit Cards accessible in
+                    the nation.
+                  </ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    Consistent customer support regardless of the ticket-size.{" "}
+                  </ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    Exact match bargains as per your profile.
+                  </ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    Real-time loan quote comparison conceivable.{" "}
+                  </ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    Delicate credit checks to guarantee no effect on your score.{" "}
+                  </ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    Free monetary guidance on the most proficient method to pick
+                    reliable and solid deals on secured about and unsecured
+                    advances, insurance covers and credit cards.{" "}
+                  </ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    Individual attention for each query irrespective of client
+                    income/business capital, location and credit record.{" "}
+                  </ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    Transparent approach. No concealed charges or phony
+                    guarantees.{" "}
+                  </ListItemText>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <ArrowRightIcon />
+                  </ListItemIcon>
+                  <ListItemText>
+                    100% data security. We don't share customer subtleties with
+                    any outsider for the reasons other than client driven
+                    product inquiries.
+                  </ListItemText>
+                </ListItem>
+              </List>
             </Typography>
           </Grid>
 
