@@ -133,7 +133,6 @@ const LifeInsurance = () => {
           <br />
           What Is Life Insurance?
           <br />
-          <br />
           Life Insurance is an agreement between an insurer and a policyholder
           in which the insurer ensures payment of a death benefit to named
           beneficiaries when the insured dies. The insurance agency guarantees a
@@ -324,7 +323,6 @@ const LifeInsurance = () => {
           policyholder will regularly pay an extra premium for each rider or a
           fee to exercise the rider, however a few policies include certain
           riders in their base premium. <br />
-          <br />
           • The accidental death benefit rider gives extra life insurance
           coverage in the occasion the insured’s death is coincidental.
           <br />
@@ -350,12 +348,12 @@ const LifeInsurance = () => {
           <br />
           <br />
           <div style={{ border: "1px solid", display: "block" }}>
-            IMPORTANT*{" "}
+            <b>IMPORTANT</b>
             <i>
-              “Every policy is unique to the insured and insurer. It's essential
+              Every policy is unique to the insured and insurer. It's essential
               to audit your policy document to comprehend what risks your policy
               covers, the amount it will pay to your beneficiaries, and under
-              what conditions. “
+              what conditions.
             </i>
           </div>
         </Typography>
@@ -365,8 +363,8 @@ const LifeInsurance = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
-          How much Life Insurance to Buy?
           <br />
+          How much Life Insurance to Buy?
           <br />
           Before you apply for life insurance, you ought to examine your
           financial circumstance and decide how much cash would be required to
@@ -384,15 +382,15 @@ const LifeInsurance = () => {
           <br />
           <br />
           <div style={{ border: "1px solid", display: "block" }}>
-            *TIP* (WRITE IN BOX): It's judicious to rethink your life insurance
-            needs every year or after noteworthy life events, for example,
-            separation, marriage, the birth or adoption of a child, or
-            significant purchases, like, a house. You may need to update the
-            policy’s beneficiaries, increase your coverage, or even decrease
-            your coverage.
+            <b>TIP</b>: It's judicious to rethink your life insurance needs
+            every year or after noteworthy life events, for example, separation,
+            marriage, the birth or adoption of a child, or significant
+            purchases, like, a house. You may need to update the policy’s
+            beneficiaries, increase your coverage, or even decrease your
+            coverage.
           </div>
-          Extra Uses for Life Insurance <br />
           <br />
+          Extra Uses for Life Insurance <br />
           A vast majority of people use life insurance to provide cash to
           beneficiaries who might endure a financial hardship upon the insured’s
           death. In any case, for wealthy folks, the tax advantages of life

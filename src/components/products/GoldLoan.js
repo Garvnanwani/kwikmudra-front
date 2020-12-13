@@ -140,6 +140,7 @@ const GoldLoan = () => {
           acquisition of property or car, health related emergency, holiday with
           family, agrarian requirements, and so forth.
           <br />
+          <br />
           Why go for Personal or Business advances when you have the support of
           gold with you! Get a credit against your gold, in minutes!
           <br />
@@ -158,11 +159,11 @@ const GoldLoan = () => {
           style={{ textAlign: "left" }}
         >
           <br />
-          Highlights of Goal Loan <br />
+          Highlights of Goal Loan
           <br />
-          Least Requirements: A certified copy of Passport, Driving License,
-          Aadhaar number, Voters ID, Job card gave by NREGA duly signed by an
-          Officer of the state government and letter issued by the NPR
+          Least Requirements: <br /> A certified copy of Passport, Driving
+          License, Aadhaar number, Voters ID, Job card gave by NREGA duly signed
+          by an Officer of the state government and letter issued by the NPR
           containing subtleties of name and address. One recent photograph, The
           Permanent Account Number or Form No. 60 as characterized in Income-tax
           Rules,1962.
@@ -212,6 +213,7 @@ const GoldLoan = () => {
           align="center"
           style={{ textAlign: "left" }}
         >
+          <br />
           Why Us? <br />
           Over 3.5 million satisfied clients
           <br />

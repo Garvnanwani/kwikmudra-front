@@ -145,6 +145,7 @@ const LoanAgainstProperty = () => {
           borrower is required to announce the end utilization of the loan in
           its application structure.
           <br />
+          <br />
           Main Objectives Secondary Objectives
           <br />
           Business expansion Home purchase
@@ -154,6 +155,7 @@ const LoanAgainstProperty = () => {
           Personal expenses such as wedding or vacation Home renovation
           <br />
           Medical emergency Plot purchase
+          <br />
           <br />
           Main objectives to recall are:
           <br />
@@ -171,6 +173,7 @@ const LoanAgainstProperty = () => {
           You may be eligible for property loan in India from one or more banks
           if you meet the following eligibility conditions:
           <br />
+          <br />
           Parameters Eligibility Criteria
           <br />
           Minimum and Maximum Age Individuals with minimum age of 21 years and
@@ -185,6 +188,7 @@ const LoanAgainstProperty = () => {
           Note: However, some banks may not offer a loan against property for
           more than 7 years or 9 years. Only selected banks offer mortgage loan
           up to 20 years.
+          <br />
           <br />
           Net Monthly Income • Banks prefer minimum income of ₹ 40,000 for
           salaried persons and ₹ 3 Lakh p.a for self employed
@@ -211,6 +215,7 @@ const LoanAgainstProperty = () => {
           for personal purposes while self employed borrower are more likely to
           take a this type of loan for business purposes.
           <br />
+          <br />
           LTV Banks typically give mortgage loan for a LTV of 60-70%.
           <br />
           The LTV ratio differs by type of property. LTV ratio is highest for
@@ -223,6 +228,7 @@ const LoanAgainstProperty = () => {
           <br />
           • For commercial property – 60 - 70%
           <br />
+          <br />
           CIBIL Score for Loan against property Banks gives loan based on market
           value or registered value of the property, whichever is lower.
           <br />
@@ -232,6 +238,7 @@ const LoanAgainstProperty = () => {
           Note: In case of low CIBIL score, you can be eligible for few banks or
           NBFCs with some additional conditions like higher interest rate and
           higher margin
+          <br />
           <br />
           It is anything but difficult to avail this loan online by looking at
           loan against property financing costs, handling charges and other loan
@@ -360,6 +367,7 @@ const LoanAgainstProperty = () => {
           make the way toward getting contract loan simple and client neighborly
           for our esteemed clients.
           <br />
+          <br />
           Different loan variants
           <br />
           Standard Loan against property: This is the most widely recognized
@@ -399,6 +407,7 @@ const LoanAgainstProperty = () => {
           differ from bank to bank dependent on your pay and estimation of the
           property and requirements a careful correlation.
           <br />
+          <br />
           Type Of Properties And Conditions Industrial Property Commercial
           Property Residential Property
           <br />
@@ -428,6 +437,7 @@ const LoanAgainstProperty = () => {
           <br />
           CIBIL 650 and more 650 and more 650 and more
           <br />
+          <br />
           Mortgage loan EMI Calculator
           <br />
           Mortgage loan EMI is the monthly amount or instalment that you pay
@@ -448,6 +458,7 @@ const LoanAgainstProperty = () => {
           <br />
           • Loan tenure – Longer the loan tenure, lower the EMI and vice versa
           <br />
+          <br />
           Loan Against Property EMI Calculator
           <br />
           Compare Property Loan Rates and Charges
@@ -467,6 +478,7 @@ const LoanAgainstProperty = () => {
           launch attractive schemes with low interest rates on loans at regular
           basis. Hence, always check for offers from multiple banks to get the
           best property loan interest.
+          <br />
           <br />
           Least Loan Against Property Interest Rate
           <br />
@@ -500,6 +512,7 @@ const LoanAgainstProperty = () => {
           least expensive rate of interest. Applying for a sum higher than your
           qualification may prompt dismissal of your advance application.
           <br />
+          <br />
           Documents Required for Loan Against Property LAP
           <br />
           • Signed Application Form
@@ -515,6 +528,7 @@ const LoanAgainstProperty = () => {
           • Last 6 months bank statement
           <br />
           • Last 2 years ITR
+          <br />
           <br />
           Documents Required Individuals Firms, Partnerships
           <br />
@@ -538,6 +552,7 @@ const LoanAgainstProperty = () => {
           License, Voter id card, Birth certificate, Employee ID card (only for
           PSU/ Government employees), School/ college leaving certificate
           <br />
+          <br />
           Reverse Mortgage
           <br />
           This is a unique loan which is a guarantee credit requiring a person
@@ -548,6 +563,7 @@ const LoanAgainstProperty = () => {
           individual needs to contract their private property to benefit this
           advance. It furnishes a person with an alternative to get to the
           unhampered estimation of a property.
+          <br />
           <br />
           How to take a Reverse Mortgage?
           <br />
@@ -571,6 +587,7 @@ const LoanAgainstProperty = () => {
           <br />
           Property utilized for business uses isn't qualified for the this type
           <br />
+          <br />
           Business Property Loan
           <br />
           Business Property Loan as the name recommends is the credit given to
@@ -578,6 +595,7 @@ const LoanAgainstProperty = () => {
           organizations. It helps in meeting the money related prerequisite of
           business for extending business, benefiting new innovation, recruiting
           new workers, keeping up stock and others such purposes.
+          <br />
           <br />
           How does a business property advance work?
           <br />
@@ -593,8 +611,10 @@ const LoanAgainstProperty = () => {
           timeslot on an ideal opportunity to avoid off advance default and harm
           his credit value.
           <br />
-          *Always be on the lookout for RBI’s latest monetary policy changes and
-          government news offerings.
+          <b>
+            Always be on the lookout for RBI’s latest monetary policy changes
+            and government news offerings.
+          </b>
           <br />
         </Typography>
       </div>

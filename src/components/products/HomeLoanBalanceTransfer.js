@@ -155,7 +155,9 @@ const HomeLoanBalanceTransfer = () => {
           • Special arrangement for Home Loans for those employed in the Indian
           Army.
           <br />
+          <br />
           Who can Apply? ‘’
+          <br />
           <br />
           Primary Applicant
           <br />
@@ -167,6 +169,7 @@ const HomeLoanBalanceTransfer = () => {
           <br />
           • All genders
           <br />
+          <br />
           Co-applicant(s)
           <br />
           • Including Co-Applicant helps in expanding the loan total.
@@ -175,6 +178,7 @@ const HomeLoanBalanceTransfer = () => {
           <br />
           • All co-applicants need not be co-proprietors. By and large
           co-applicants are family members.
+          <br />
           <br />
           What are the advantages of moving home advance?
           <br />
@@ -235,7 +239,6 @@ const HomeLoanBalanceTransfer = () => {
           • Totally filled application form for transfer issued by the financial
           organization.
           <br />
-          <br />
           • Latest three months' Salary Slips demonstrating break up of Gross
           salary that is the Basic Pay, House lease and Net Salary after
           derivations, if any.
@@ -264,6 +267,7 @@ const HomeLoanBalanceTransfer = () => {
           • The Loan statement copy and complete set of documents relating to
           the property that is right now in possession of the current home
           credit lender.
+          <br />
           <br />
           How can I avail the best home loan transfer offer?
           <br />

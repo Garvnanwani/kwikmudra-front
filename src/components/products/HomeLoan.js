@@ -144,6 +144,7 @@ const HomeLoan = () => {
           legitimate rights to recover the outstanding loan amount by sale of
           the property in question.
           <br />
+          <br />
           Types of Home Loan:
           <br />
           Home Purchase Loan: This is the credit that one takes for buying a
@@ -174,8 +175,8 @@ const HomeLoan = () => {
           money over the outstanding loan total. There are appealing rates of
           interest offered by us in case of top-up loans.
           <br />
-          Home Loan - Features and Benefits <br />
           <br />
+          Home Loan - Features and Benefits <br />
           • Pradhan Mantri Awas Yojana (PMAY)
           <br />
           Home Loans get more affordable than ever, with help from the Pradhan

@@ -132,7 +132,6 @@ const PersonalLoan = () => {
           <br />
           About Personal Loan
           <br />
-          <br />
           Personal Loan is a short to medium term advance, which doesn't require
           any collateral /security for disbursal. They are for the most part
           dispensed in a couple of hours to a couple of days with negligible or
@@ -141,6 +140,7 @@ const PersonalLoan = () => {
           to meet an lot of requirements going from crisis clinical costs to
           arranged uses, for example, home redesign, wedding, and so on.
           <br />
+          <br />
           Personal Loan Eligibility Factors
           <br />
           Most banks and NBFCs (Non-Banking Financial Companies) offer
@@ -148,6 +148,7 @@ const PersonalLoan = () => {
           qualification norms for an individual advance shift marginally relying
           upon the sort of candidate. Following are a portion of the key
           individual loan qualification factors that should be kept in mind*:
+          <br />
           <br />
           Particulars Salaried Self-Employed
           <br />
@@ -160,6 +161,7 @@ const PersonalLoan = () => {
           Experience in the current organization- Minimum 1 year Minimum 2 years
           in current business
           <br />
+          <br />
           How Personal Loan Works
           <br />
           Personal Loan are unsecured loan with adaptable end-use that
@@ -167,6 +169,7 @@ const PersonalLoan = () => {
           shorter period is picked, individual EMI sums are higher, while a more
           extended period brings about lower individual EMIs. Coming up next are
           the key highlights of an individual advance:
+          <br />
           <br />
           Personal Loan Features
           <br />
@@ -203,6 +206,7 @@ const PersonalLoan = () => {
           Personal loan interest rates differ from one lending bank to another.
           NBFC’s have a slightly higher rate but quicker disbursal chances.,
           <br />
+          <br />
           Documents Required
           <br />
           Identity Proof PAN Card/ Voter’s ID/ Aadhaar Card/ Passport/ Driving
@@ -221,7 +225,8 @@ const PersonalLoan = () => {
           Business Proof Certificate of Practice/ Partnership Deed/ GST
           Registration and Filing Documents/ MOA & AOA/ Shop Act License
           <br />
-          ** Just a sample list. Actual list will vary
+          <b>Just a sample list. Actual list will vary</b>
+          <br />
           <br />
           Documents Required :
           <br />
@@ -240,9 +245,7 @@ const PersonalLoan = () => {
           the individual advance application is approved.
           <br />
           Step 5: Loan is dispensed once the candidate consents to the advance
-          arrangement
-          <br />
-          and signs the necessary paperwork
+          arrangement and signs the necessary paperwork
           <br />
           The primary variables influencing the loan disbursal
           <br />
