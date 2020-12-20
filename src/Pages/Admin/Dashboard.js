@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
       height: "120px",
     },
     marginBottom: "16px",
-    borderRadius: "15px",
+    // borderRadius: "15px",
     backgroundColor: theme.palette.primary.main,
     color: "#fff",
     transition: theme.transitions.create(["background", "transform"], {
@@ -224,12 +224,12 @@ export default function Dashboard() {
         <Divider />
         <List>{mainListItems}</List>
         <Divider />
-        <List primary="Name">
+        {/* <List primary="Name">
           <div style={{ marginTop: "10px" }}>
             <Typography variant="h6">Admin Name Here</Typography>
             <Typography variant="body1">Username here</Typography>
           </div>
-        </List>
+        </List> */}
         {/* <List>{secondaryListItems}</List> */}
       </Drawer>
       <main className={classes.content}>

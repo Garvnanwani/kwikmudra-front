@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import AboutPage from "./Pages/AboutPage";
 import Dashboard from "./Pages/Admin/Dashboard";
+import AgentDashboard from "./Pages/Agent/AgentDashboard";
+import EmployeeDashboard from "./Pages/Employee/EmployeeDashboard";
 import App from "./Pages/App";
 import ProdForm from "./Pages/ProdForm";
 import SignIn from "./Pages/Signin";
@@ -18,6 +20,8 @@ const Routing = () => {
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={Signup} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/agent" exact component={AgentDashboard} />
+        <Route path="/employee" exact component={EmployeeDashboard} />
         <Route path="/admin/employee/signup" component={EmployeeSignUp} />
         <Route path="/admin" exact component={Dashboard} />
         <Route path="/product/:productName" component={ProdForm} />
