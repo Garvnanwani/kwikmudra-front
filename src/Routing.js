@@ -11,6 +11,7 @@ import SignIn from "./Pages/Signin";
 import Signup from "./Pages/Signup";
 import EmployeeSignUp from "./Pages/EmployeeSignup";
 import AgentRoute from './components/AgentRoute'
+import EmployeeRoute from './components/EmployeeRoute'
 import "./styles/index.css";
 
 const Routing = () => {
@@ -22,7 +23,7 @@ const Routing = () => {
         <Route path="/signup" component={Signup} />
         <Route path="/about" component={AboutPage} />
         <AgentRoute path="/agent" exact component={AgentDashboard} />
-        <Route path="/employee" exact component={EmployeeDashboard} />
+        <EmployeeRoute path="/employee" exact component={EmployeeDashboard} />
         <Route path="/admin/employee/signup" component={EmployeeSignUp} />
         <Route path="/admin" exact component={Dashboard} />
         <Route path="/product/:productName" component={ProdForm} />
